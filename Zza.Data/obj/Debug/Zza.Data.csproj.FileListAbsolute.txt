@@ -38,3 +38,23 @@ D:\Coding\WPF\demos\demos\ZzaDashboard - SimpleMVVM\Zza.Data\obj\Debug\Zza.Data.
 D:\Coding\WPF\demos\demos\ZzaDashboard - SimpleMVVM\Zza.Data\obj\Debug\Zza.Data.csproj.CopyComplete
 D:\Coding\WPF\demos\demos\ZzaDashboard - SimpleMVVM\Zza.Data\obj\Debug\Zza.Data.dll
 D:\Coding\WPF\demos\demos\ZzaDashboard - SimpleMVVM\Zza.Data\obj\Debug\Zza.Data.pdb
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\Zza.Data.dll.config
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\Zza.Data.dll
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\Zza.Data.pdb
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\EntityFramework.dll
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\Microsoft.Expression.Controls.dll
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\Microsoft.Expression.Drawing.dll
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\Microsoft.Expression.Effects.dll
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\Microsoft.Expression.Interactions.dll
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\Microsoft.Expression.Prototyping.Interactivity.dll
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\Microsoft.Expression.Prototyping.SketchControls.dll
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\Microsoft.SDK.Expression.Blend.dll
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\System.Windows.Interactivity.dll
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\EntityFramework.xml
+D:\Coding\Git\Daruma_Doll\Zza.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Coding\Git\Daruma_Doll\Zza.Data\obj\Debug\Zza.Data.csprojAssemblyReference.cache
+D:\Coding\Git\Daruma_Doll\Zza.Data\obj\Debug\Zza.Data.csproj.CoreCompileInputs.cache
+D:\Coding\Git\Daruma_Doll\Zza.Data\obj\Debug\Zza.Data.csproj.CopyComplete
+D:\Coding\Git\Daruma_Doll\Zza.Data\obj\Debug\Zza.Data.dll
+D:\Coding\Git\Daruma_Doll\Zza.Data\obj\Debug\Zza.Data.pdb
