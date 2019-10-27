@@ -48,7 +48,7 @@
                      Text="{Binding Customer.FirstName}"
                      VerticalAlignment="Center"
                      Width="120" />
-            <Label Content="Last Name:"
+            <!--<Label Content="Last Name:"
                    Grid.Column="0"
                    HorizontalAlignment="Left"
                    Margin="3"
@@ -62,8 +62,8 @@
                      Grid.Row="1"
                      Text="{Binding Customer.LastName}"
                      VerticalAlignment="Center"
-                     Width="120" />
-            <Label Content="Phone:"
+                     Width="120" />-->
+            <!--<Label Content="Phone:"
                    Grid.Column="0"
                    HorizontalAlignment="Left"
                    Margin="3"
@@ -77,7 +77,7 @@
                      Grid.Row="2"
                      Text="{Binding Customer.Phone}"
                      VerticalAlignment="Center"
-                     Width="120" />
+                     Width="120" />-->
             <StackPanel Grid.Row="3"
                         Grid.Column="0"
                         Grid.ColumnSpan="2"
