@@ -1,6 +1,6 @@
 
 
-CREATE TABLE [dbo].[PrincipalParts](
+CREATE TABLE [dbo].[PrincipalPart](
 [Id] [uniqueidentifier] NOT NULL,
 Present varchar(20), 
 PresentInfinitive varchar(20), 
@@ -9,7 +9,7 @@ Supine varchar(20),
 WhichConjugation varchar(20), 
 Deponent bit, 
 Defective bit
-CONSTRAINT [PK_PrincipalParts] PRIMARY KEY CLUSTERED
+CONSTRAINT [PK_PrincipalPart] PRIMARY KEY CLUSTERED
 ([Id] ASC)
 WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
 ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
@@ -17,7 +17,7 @@ ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
 
 
-INSERT INTO [dbo].[PrincipalParts]
+INSERT INTO [dbo].[PrincipalPart]
            ([Id]
            ,[Present]
            ,[PresentInfinitive]
@@ -38,7 +38,7 @@ INSERT INTO [dbo].[PrincipalParts]
 GO
 
 
-INSERT INTO [dbo].[PrincipalParts]
+INSERT INTO [dbo].[PrincipalPart]
            ([Id]
            ,[Present]
            ,[PresentInfinitive]
@@ -58,7 +58,7 @@ INSERT INTO [dbo].[PrincipalParts]
 		   0)
 
 
-INSERT INTO [dbo].[PrincipalParts]
+INSERT INTO [dbo].[PrincipalPart]
     ([Id]
     ,[Present]
     ,[PresentInfinitive]

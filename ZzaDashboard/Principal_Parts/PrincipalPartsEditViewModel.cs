@@ -10,8 +10,8 @@ namespace ZzaDashboard.Principal_Parts
 {
     public class PrincipalPartsEditViewModel : INotifyPropertyChanged
     {
-        private Customer _customer;
-        private ICustomersRepository _repository = new CustomersRepository();
+        private PrincipalPart _principalPart;
+        private IPrincipalPartsRepsository _repository = new PrincipalPartsRepository();
 
         public PrincipalPartsEditViewModel()
         {
@@ -20,30 +20,30 @@ namespace ZzaDashboard.Principal_Parts
 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         
-        public Customer Customer
+        public PrincipalPart PrincipalPart
         {
-            get { return _customer; }
+            get { return _principalPart; }
             set
             {
-                if (value != _customer)
+                if (value != _principalPart)
                 {
-                    _customer = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Customer"));
+                    _principalPart = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("PrincipalPart"));
                 }
             }
         }
 
-        public Guid CustomerId { get; set; }
+        public Guid PrincipalPartId { get; set; }
         public ICommand SaveCommand { get; set; }
 
-        public async void LoadCustomer()
+        public async void LoadPrincipalPart()
         {
-            Customer = await _repository.GetCustomerAsync(CustomerId);
+            PrincipalPart = await _repository.GetPrincipalPartAsync(PrincipalPartId);
         }
 
         private async void OnSave()
         {
-            Customer = await _repository.UpdateCustomerAsync(Customer);
+            PrincipalPart = await _repository.UpdatePrincipalPartAsync(PrincipalPart);
         }
 
     }

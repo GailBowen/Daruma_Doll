@@ -13,14 +13,14 @@ namespace ZzaDashboard.Principal_Parts
             InitializeComponent();
         }
 
-        public Guid CustomerId
+        public Guid PrincipalPartId
         {
-            get { return (Guid)GetValue(CustomerIdProperty); }
-            set { SetValue(CustomerIdProperty, value); }
+            get { return (Guid)GetValue(PrincipalPartIdProperty); }
+            set { SetValue(PrincipalPartIdProperty, value); }
         }
 
-        public static readonly DependencyProperty CustomerIdProperty =
-            DependencyProperty.Register("CustomerId", typeof(Guid), 
+        public static readonly DependencyProperty PrincipalPartIdProperty =
+            DependencyProperty.Register("PrincipalPartId", typeof(Guid), 
             typeof(PrincipalPartsEditView), new PropertyMetadata(Guid.Empty));
     }
 }
