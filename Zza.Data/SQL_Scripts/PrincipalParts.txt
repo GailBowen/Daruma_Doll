@@ -1,0 +1,81 @@
+
+
+CREATE TABLE [dbo].[PrincipalParts](
+[Id] [uniqueidentifier] NOT NULL,
+Present varchar(20), 
+PresentInfinitive varchar(20), 
+PerfectActive varchar(20), 
+Supine varchar(20), 
+WhichConjugation varchar(20), 
+Deponent bit, 
+Defective bit
+CONSTRAINT [PK_PrincipalParts] PRIMARY KEY CLUSTERED
+([Id] ASC)
+WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+INSERT INTO [dbo].[PrincipalParts]
+           ([Id]
+           ,[Present]
+           ,[PresentInfinitive]
+           ,[PerfectActive]
+           ,[Supine]
+           ,[WhichConjugation]
+           ,[Deponent]
+           ,[Defective])
+     VALUES
+           (NEWID(),
+           'ignoro',
+		   'ignorare',
+		   'ignoravi',
+		   'ignoratum', 
+		   'first', 
+		   0, 
+		   0)
+GO
+
+
+INSERT INTO [dbo].[PrincipalParts]
+           ([Id]
+           ,[Present]
+           ,[PresentInfinitive]
+           ,[PerfectActive]
+           ,[Supine]
+           ,[WhichConjugation]
+           ,[Deponent]
+           ,[Defective])
+     VALUES
+           (NEWID(),
+           'conor',
+		   'conari',
+		   'conatus sum',
+		   '',
+		   'first',
+		   1, 
+		   0)
+
+
+INSERT INTO [dbo].[PrincipalParts]
+    ([Id]
+    ,[Present]
+    ,[PresentInfinitive]
+    ,[PerfectActive]
+    ,[Supine]
+    ,[WhichConjugation]
+    ,[Deponent]
+    ,[Defective])
+  VALUES
+    (NEWID(),
+	'inquam',
+	'',
+	'inquii',
+	'',  
+	'irregular',
+	0, 
+	1)
+GO
+
+select * from PrincipalParts
