@@ -7,8 +7,8 @@
              xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
              x:Class="ZzaDashboard.Principal_Parts.PrincipalPartsEditView"
              mc:Ignorable="d"
-             d:DesignHeight="300"
-             d:DesignWidth="300">
+             d:DesignHeight="3000"
+             d:DesignWidth="3000">
     <UserControl.DataContext>
         <local:PrincipalPartsEditViewModel PrincipalPartId="18FA53AF-5245-4463-B61E-C2EAFE34DA84" />
     </UserControl.DataContext>
@@ -18,8 +18,8 @@
                                  MethodName="LoadPrincipalPart" />
         </i:EventTrigger>
     </i:Interaction.Triggers>
-    <Grid>
-        <Grid x:Name="grid1"
+    <Grid x:Name="grid1">
+        <!--<Grid x:Name="grid1"
               HorizontalAlignment="Left"
               Margin="10,10,0,0"
               VerticalAlignment="Top">
@@ -48,7 +48,7 @@
                      Text="{Binding PrincipalPart.Present}"
                      VerticalAlignment="Center"
                      Width="120" />
-            <!--<Label Content="Last Name:"
+            --><!--<Label Content="Last Name:"
                    Grid.Column="0"
                    HorizontalAlignment="Left"
                    Margin="3"
@@ -77,7 +77,7 @@
                      Grid.Row="2"
                      Text="{Binding Customer.Phone}"
                      VerticalAlignment="Center"
-                     Width="120" />-->
+                     Width="120" />--><!--
             <StackPanel Grid.Row="3"
                         Grid.Column="0"
                         Grid.ColumnSpan="2"
@@ -90,7 +90,109 @@
                         Command="{Binding SaveCommand}" />
             </StackPanel>
 
-        </Grid>
+        </Grid>-->
+
+        <!---http://latindictionary.wikidot.com/verb:amare-->
+
+      
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Background="IndianRed"></Border>
+            <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"
+                   Foreground="White" FontWeight="Bold" FontSize="18"
+                   HorizontalAlignment="Center">Active</TextBlock>
+
+            <Border Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Background="LightBlue"></Border>
+
+            <TextBlock Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Foreground="White" FontWeight="Bold" FontSize="18"
+                   HorizontalAlignment="Center">Passive</TextBlock>
+
+
+            <Border Grid.Row="2" Grid.Column="2" Background="Black"></Border>
+            <TextBlock Grid.Row="2" Grid.Column="2" Foreground="White" FontWeight="Bold" FontSize="16"
+                   HorizontalAlignment="Center">Indicative</TextBlock>
+
+            <Border Grid.Row="2" Grid.Column="3" Background="LightGreen"></Border>
+            <TextBlock Grid.Row="2" Grid.Column="3" Foreground="White" FontWeight="Bold" FontSize="16"
+                   HorizontalAlignment="Center">Subjunctive</TextBlock>
+
+            <Border Grid.Row="2" Grid.Column="4" Background="Black"></Border>
+            <TextBlock Grid.Row="2" Grid.Column="4" Foreground="White" FontWeight="Bold" FontSize="16"
+                   HorizontalAlignment="Center">Indicative</TextBlock>
+
+            <Border Grid.Row="2" Grid.Column="5" Background="LightGreen"></Border>
+            <TextBlock Grid.Row="2" Grid.Column="5" Foreground="White" FontWeight="Bold" FontSize="16"
+                   HorizontalAlignment="Center">Subjunctive</TextBlock>
+
+            <Border Grid.Row="3" Grid.Column="2" Background="DarkGray" Grid.ColumnSpan="4"></Border>
+            <TextBlock Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White" FontWeight="Bold" FontSize="16"
+                   HorizontalAlignment="Center">Present</TextBlock>
+
+            <TextBlock Grid.Row="4" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Singular 1</TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">2</TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">3</TextBlock>
+            <TextBlock Grid.Row="7" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Plural 1</TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">2</TextBlock>
+            <TextBlock Grid.Row="9" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">3</TextBlock>
+
+            <TextBlock x:Name="firstNameTextBox"
+                             Grid.Column="2"
+                             TextAlignment="Center"
+                             Grid.Row="4"
+                             Text="{Binding PrincipalPart.Present}"
+                             Padding="0,10,15,0"
+                              />
+
+        <TextBlock 
+                             Grid.Column="2"
+                             TextAlignment="Center"
+                             Grid.Row="5"
+                             Text="ignoras"
+                             Padding="0,10,15,0"
+                              />
+
+        <TextBlock 
+                             Grid.Column="2"
+                             TextAlignment="Center"
+                             Grid.Row="6"
+                             Text="ignorat"
+                             Padding="0,10,15,0"
+                              />
+
 
     </Grid>
+    
 </UserControl>

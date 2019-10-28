@@ -3,10 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Customers="clr-namespace:ZzaDashboard.Customers"
         xmlns:Principal_Parts="clr-namespace:ZzaDashboard.Principal_Parts"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Conjugator" Height="1000" Width="1500">
     <Grid>
-        <Principal_Parts:PrincipalPartsEditView HorizontalAlignment="Left"
-                                    Margin="42,35,0,0"
-                                    VerticalAlignment="Top" />
+        <Principal_Parts:PrincipalPartsEditView 
+                HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
     </Grid>
 </Window>
