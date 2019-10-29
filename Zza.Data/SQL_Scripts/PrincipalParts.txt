@@ -78,4 +78,4 @@ INSERT INTO [dbo].[PrincipalPart]
 	1)
 GO
 
-select * from PrincipalParts
+select * from PrincipalPart

@@ -10,7 +10,7 @@
              d:DesignHeight="3000"
              d:DesignWidth="3000">
     <UserControl.DataContext>
-        <local:PrincipalPartsEditViewModel PrincipalPartId="18FA53AF-5245-4463-B61E-C2EAFE34DA84" />
+        <local:PrincipalPartsEditViewModel PrincipalPartId="D3ECE85B-95AA-4056-B09F-A59688DED8F6" />
     </UserControl.DataContext>
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
