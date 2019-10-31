@@ -11,6 +11,16 @@ namespace Zza.Data
         [Key]
         public Guid Id { get; set; }
 
+        
+
+        public string CombinedParts
+        {
+            get {
+                return $"{Present}, {PresentInfinitive}, {PerfectActive}, {Supine}";
+            }
+            
+        }
+        
         public string Present { get; set; }
 
         public string PresentInfinitive { get; set; }
