@@ -11,6 +11,8 @@ namespace ZzaDashboard.Principal_Parts
     public class PrincipalPartsEditViewModel : INotifyPropertyChanged
     {
         private PrincipalPart _principalPart;
+        private Inflection _indicative_Active_Present;
+
         private IPrincipalPartsRepsository _repository = new PrincipalPartsRepository();
 
         public PrincipalPartsEditViewModel()
@@ -33,12 +35,31 @@ namespace ZzaDashboard.Principal_Parts
             }
         }
 
+        public Inflection Indicative_Active_Present
+        {
+            get { return _indicative_Active_Present; }
+            set
+            {
+                if (value != _indicative_Active_Present)
+                {
+                    _indicative_Active_Present = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("Indicative_Active_Present"));
+                }
+            }
+        }
+
         public Guid PrincipalPartId { get; set; }
         public ICommand SaveCommand { get; set; }
 
         public async void LoadPrincipalPart()
         {
             PrincipalPart = await _repository.GetPrincipalPartAsync(PrincipalPartId);
+
+            Inflection inflection = new Inflection();
+            inflection.singular_first = PrincipalPart.Present;
+            inflection.singular_second = "test123";
+
+            Indicative_Active_Present = inflection;
         }
 
         private async void OnSave()
