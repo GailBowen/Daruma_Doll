@@ -1,21 +1,20 @@
-
+﻿
 
 CREATE TABLE [dbo].[PrincipalPart](
-[Id] [uniqueidentifier] NOT NULL,
-Present varchar(20), 
-PresentInfinitive varchar(20), 
-PerfectActive varchar(20), 
-Supine varchar(20), 
-WhichConjugation varchar(20), 
-Deponent bit, 
-Defective bit
-CONSTRAINT [PK_PrincipalPart] PRIMARY KEY CLUSTERED
-([Id] ASC)
-WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
-ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+	[Id] [uniqueidentifier] NOT NULL,
+	[Present] [nvarchar](20) NULL,
+	[PresentInfinitive] [nvarchar](20) NULL,
+	[PerfectActive] [nvarchar](20) NULL,
+	[Supine] [nvarchar](20) NULL,
+	[WhichConjugation] [varchar](20) NULL,
+	[Deponent] [bit] NULL,
+	[Defective] [bit] NULL,
+ CONSTRAINT [PK_PrincipalParts] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
 
 INSERT INTO [dbo].[PrincipalPart]
            ([Id]
@@ -79,3 +78,6 @@ INSERT INTO [dbo].[PrincipalPart]
 GO
 
 select * from PrincipalPart
+
+update principalpart 
+set Present = N'ignōrō' where id = '091A3194-665A-479F-B515-A8E8D27075D8'
