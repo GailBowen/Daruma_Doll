@@ -111,21 +111,48 @@
                              Padding="0,10,15,0"
                               />
 
-        <TextBlock 
-                             Grid.Column="2"
-                             TextAlignment="Center"
-                             Grid.Row="6"
-                             Text="{Binding Indicative_Active_Present.singular_second}"
-                             Padding="0,10,15,0"
-                              />
+            <TextBlock 
+                                 Grid.Column="2"
+                                 TextAlignment="Center"
+                                 Grid.Row="6"
+                                 Text="{Binding Indicative_Active_Present.singular_second}"
+                                 Padding="0,10,15,0"
+                                  />
+
+              <TextBlock 
+                                 Grid.Column="2"
+                                 TextAlignment="Center"
+                                 Grid.Row="7"
+                                 Text="{Binding Indicative_Active_Present.singular_third}"
+                                 Padding="0,10,15,0"
+                                  />
+
+
+
 
         <TextBlock 
                              Grid.Column="2"
                              TextAlignment="Center"
-                             Grid.Row="7"
-                             Text="ignorat"
+                             Grid.Row="8"
+                              Text="{Binding Indicative_Active_Present.plural_first}"
                              Padding="0,10,15,0"
                               />
+
+        <TextBlock 
+                                 Grid.Column="2"
+                                 TextAlignment="Center"
+                                 Grid.Row="9"
+                                 Text="{Binding Indicative_Active_Present.plural_second}"
+                                 Padding="0,10,15,0"
+                                  />
+
+        <TextBlock 
+                                 Grid.Column="2"
+                                 TextAlignment="Center"
+                                 Grid.Row="10"
+                                 Text="{Binding Indicative_Active_Present.plural_third}"
+                                 Padding="0,10,15,0"
+                                  />
 
 
     </Grid>

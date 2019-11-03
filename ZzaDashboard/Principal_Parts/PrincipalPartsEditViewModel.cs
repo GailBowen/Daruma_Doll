@@ -15,6 +15,8 @@ namespace ZzaDashboard.Principal_Parts
 
         private IPrincipalPartsRepsository _repository = new PrincipalPartsRepository();
 
+        private ISuffixRepository _suffixRepository = new SuffixRepository();
+
         public PrincipalPartsEditViewModel()
         {
             SaveCommand = new RelayCommand(OnSave);
@@ -48,6 +50,8 @@ namespace ZzaDashboard.Principal_Parts
             }
         }
 
+        public List<Suffix> Suffixes { get; set; }
+
         public Guid PrincipalPartId { get; set; }
         public ICommand SaveCommand { get; set; }
 
@@ -55,9 +59,22 @@ namespace ZzaDashboard.Principal_Parts
         {
             PrincipalPart = await _repository.GetPrincipalPartAsync(PrincipalPartId);
 
+            Suffixes = await _suffixRepository.GetSuffixsAsync();
+
+            Suffix suffix = Suffixes[0];
+
             Inflection inflection = new Inflection();
+
+            string stem = PrincipalPart.Present.Remove(PrincipalPart.Present.Length - 1);
+
             inflection.singular_first = PrincipalPart.Present;
-            inflection.singular_second = "test123";
+            inflection.singular_second = $"{stem}{suffix.singular_second}";
+            inflection.singular_third = $"{stem}{suffix.singular_third}";
+
+            inflection.plural_first = $"{stem}{suffix.plural_first}";
+            inflection.plural_second = $"{stem}{suffix.plural_second}";
+            inflection.plural_third = $"{stem}{suffix.plural_third}";
+
 
             Indicative_Active_Present = inflection;
         }
