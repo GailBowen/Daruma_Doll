@@ -28,11 +28,11 @@ namespace Zza.Data
         public string PerfectActive { get; set; }
 
         public string Supine { get; set; }
-
-        public string WhichConjugation { get; set; }
-
+                
         public bool Deponent { get; set; }
 
         public bool Defective { get; set; }
+
+        public decimal Conjugation { get; set; }
     }
 }

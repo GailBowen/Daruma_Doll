@@ -1,5 +1,10 @@
-﻿
-
+﻿USE [Zza]
+GO
+/****** Object:  Table [dbo].[PrincipalPart]    Script Date: 03/11/2019 15:24:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
 CREATE TABLE [dbo].[PrincipalPart](
 	[Id] [uniqueidentifier] NOT NULL,
 	[Present] [nvarchar](20) NULL,
@@ -15,69 +20,9 @@ CREATE TABLE [dbo].[PrincipalPart](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-
-INSERT INTO [dbo].[PrincipalPart]
-           ([Id]
-           ,[Present]
-           ,[PresentInfinitive]
-           ,[PerfectActive]
-           ,[Supine]
-           ,[WhichConjugation]
-           ,[Deponent]
-           ,[Defective])
-     VALUES
-           (NEWID(),
-           'ignoro',
-		   'ignorare',
-		   'ignoravi',
-		   'ignoratum', 
-		   'first', 
-		   0, 
-		   0)
+INSERT [dbo].[PrincipalPart] ([Id], [Present], [PresentInfinitive], [PerfectActive], [Supine], [WhichConjugation], [Deponent], [Defective]) VALUES (N'7b115ca5-2b7c-45eb-9883-3a205151c13e', N'ignōrō', N'ignōrāre', N'ignōrāvī', N'ignōrātum', N'first', 0, 0)
 GO
-
-
-INSERT INTO [dbo].[PrincipalPart]
-           ([Id]
-           ,[Present]
-           ,[PresentInfinitive]
-           ,[PerfectActive]
-           ,[Supine]
-           ,[WhichConjugation]
-           ,[Deponent]
-           ,[Defective])
-     VALUES
-           (NEWID(),
-           'conor',
-		   'conari',
-		   'conatus sum',
-		   '',
-		   'first',
-		   1, 
-		   0)
-
-
-INSERT INTO [dbo].[PrincipalPart]
-    ([Id]
-    ,[Present]
-    ,[PresentInfinitive]
-    ,[PerfectActive]
-    ,[Supine]
-    ,[WhichConjugation]
-    ,[Deponent]
-    ,[Defective])
-  VALUES
-    (NEWID(),
-	'inquam',
-	'',
-	'inquii',
-	'',  
-	'irregular',
-	0, 
-	1)
+INSERT [dbo].[PrincipalPart] ([Id], [Present], [PresentInfinitive], [PerfectActive], [Supine], [WhichConjugation], [Deponent], [Defective]) VALUES (N'091a3194-665a-479f-b515-a8e8d27075d8', N'cōnor', N'cōnārī', N'cōnātus sum', N'', N'first', 1, 0)
 GO
-
-select * from PrincipalPart
-
-update principalpart 
-set Present = N'ignōrō' where id = '091A3194-665A-479F-B515-A8E8D27075D8'
+INSERT [dbo].[PrincipalPart] ([Id], [Present], [PresentInfinitive], [PerfectActive], [Supine], [WhichConjugation], [Deponent], [Defective]) VALUES (N'4f619eb9-f22e-4ec3-be1b-fde697ae862a', N'inquam', N'', N'inquiī', N'', N'irregular', 0, 1)
+GO
