@@ -207,6 +207,59 @@
                                   />
 
 
+        <TextBlock 
+                             Grid.Column="4"
+                             TextAlignment="Center"
+                             Grid.Row="5"
+                             Text="{Binding Indicative_Passive_Present.singular_first}"
+                             Padding="0,10,15,0"
+                              />
+
+        <TextBlock 
+                                 Grid.Column="4"
+                                 TextAlignment="Center"
+                                 Grid.Row="6"
+                                 Text="{Binding Indicative_Passive_Present.singular_second}"
+                                 Padding="0,10,15,0"
+                                  />
+
+        <TextBlock 
+                                 Grid.Column="4"
+                                 TextAlignment="Center"
+                                 Grid.Row="7"
+                                 Text="{Binding Indicative_Passive_Present.singular_third}"
+                                 Padding="0,10,15,0"
+                                  />
+
+
+
+
+        <TextBlock 
+                             Grid.Column="4"
+                             TextAlignment="Center"
+                             Grid.Row="8"
+                              Text="{Binding Indicative_Passive_Present.plural_first}"
+                             Padding="0,10,15,0"
+                              />
+
+        <TextBlock 
+                                 Grid.Column="4"
+                                 TextAlignment="Center"
+                                 Grid.Row="9"
+                                 Text="{Binding Indicative_Passive_Present.plural_second}"
+                                 Padding="0,10,15,0"
+                                  />
+
+        <TextBlock 
+                                 Grid.Column="4"
+                                 TextAlignment="Center"
+                                 Grid.Row="10"
+                                 Text="{Binding Indicative_Passive_Present.plural_third}"
+                                 Padding="0,10,15,0"
+                                  />
+
+
+
     </Grid>
     
 </UserControl>

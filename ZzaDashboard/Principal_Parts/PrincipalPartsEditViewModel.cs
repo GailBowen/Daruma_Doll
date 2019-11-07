@@ -13,6 +13,7 @@ namespace ZzaDashboard.Principal_Parts
         private PrincipalPart _principalPart;
         private Inflection _indicative_Active_Present;
         private Inflection _subjunctive_Active_Present;
+        private Inflection _indicative_Passive_Present;
 
         private IPrincipalPartsRepsository _repository = new PrincipalPartsRepository();
 
@@ -64,6 +65,19 @@ namespace ZzaDashboard.Principal_Parts
             }
         }
 
+        public Inflection Indicative_Passive_Present
+        {
+            get { return _indicative_Passive_Present; }
+            set
+            {
+                if (value != _indicative_Passive_Present)
+                {
+                    _indicative_Passive_Present = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("Indicative_Passive_Present"));
+                }
+            }
+        }
+
         public List<Suffix> Suffixes { get; set; }
 
         public Guid PrincipalPartId { get; set; }
@@ -106,6 +120,36 @@ namespace ZzaDashboard.Principal_Parts
 
             Subjunctive_Active_Present = inflection;
 
+
+            suffix = Suffixes.Where(s => s.Conjugation == 1.0m && s.Mood == "Indicative" && s.Passive == true && s.Tense == "Present").FirstOrDefault();
+
+            inflection = new Inflection();
+            inflection.singular_first = $"{stem}{suffix.singular_first}";
+
+            if (suffix.singular_second.Contains(','))
+            {
+                string[] segments = suffix.singular_second.Split(',');
+
+                foreach (var segment in segments)
+                {
+                    inflection.singular_second += $"{stem}{segment}, ";
+                }
+
+                inflection.singular_second = inflection.singular_second.Remove(inflection.singular_second.Length - 2);
+            }
+            else
+            {
+                inflection.singular_second = $"{stem}{suffix.singular_second}";
+            }
+
+            
+            inflection.singular_third = $"{stem}{suffix.singular_third}";
+
+            inflection.plural_first = $"{stem}{suffix.plural_first}";
+            inflection.plural_second = $"{stem}{suffix.plural_second}";
+            inflection.plural_third = $"{stem}{suffix.plural_third}";
+
+            Indicative_Passive_Present = inflection;
         }
 
         private async void OnSave()
