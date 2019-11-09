@@ -16,6 +16,8 @@ namespace ZzaDashboard.Principal_Parts
         private Inflection _indicative_Passive_Present;
         private Inflection _subjunctive_Passive_Present;
 
+        private Tense _presentTense;
+
         private IPrincipalPartsRepsository _repository = new PrincipalPartsRepository();
 
         private ISuffixRepository _suffixRepository = new SuffixRepository();
@@ -26,7 +28,20 @@ namespace ZzaDashboard.Principal_Parts
         }
 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
-        
+
+        public Tense PresentTense
+        {
+            get { return _presentTense; }
+            set
+            {
+                if (value != _presentTense)
+                {
+                    _presentTense = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("PresentTense"));
+                }
+            }
+        }
+
         public PrincipalPart PrincipalPart
         {
             get { return _principalPart; }
@@ -118,8 +133,11 @@ namespace ZzaDashboard.Principal_Parts
             inflection.plural_third = $"{stem}{suffix.plural_third}";
 
 
-            Indicative_Active_Present = inflection;
+            //Indicative_Active_Present = inflection;
 
+            PresentTense = new Tense();
+
+            PresentTense.Indicative_Active_Present = inflection;
 
             suffix = Suffixes.Where(s => s.Conjugation == 1.0m && s.Mood == "Subjunctive" && s.Passive == false && s.Tense == "Present").FirstOrDefault();
 
