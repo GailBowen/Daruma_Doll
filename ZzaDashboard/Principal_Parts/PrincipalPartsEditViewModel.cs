@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Input;
 using Zza.Data;
 using ZzaDashboard.Services;
+using ZzaDashboard.Logic;
 
 namespace ZzaDashboard.Principal_Parts
 {
@@ -59,104 +60,19 @@ namespace ZzaDashboard.Principal_Parts
         public async void LoadPrincipalPart()
         {
             PrincipalPart = await _repository.GetPrincipalPartAsync(PrincipalPartId);
-
             Suffixes = await _suffixRepository.GetSuffixsAsync();
 
-            Suffix suffix = Suffixes.Where(s => s.Conjugation == 1.0m && s.Mood == "Indicative" && s.Passive == false && s.Tense == "Present").FirstOrDefault();
-
-            Inflection inflection = new Inflection();
-
-            string stem = PrincipalPart.Present.Remove(PrincipalPart.Present.Length - 1);
-
-            inflection.singular_first = PrincipalPart.Present;
-            inflection.singular_second = $"{stem}{suffix.singular_second}";
-            inflection.singular_third = $"{stem}{suffix.singular_third}";
-
-            inflection.plural_first = $"{stem}{suffix.plural_first}";
-            inflection.plural_second = $"{stem}{suffix.plural_second}";
-            inflection.plural_third = $"{stem}{suffix.plural_third}";
-
-
-            //Indicative_Active_Present = inflection;
+            TenseManager tenseManager = new TenseManager(PrincipalPart, Suffixes);
 
             PresentTense = new Tense();
 
-            PresentTense.Indicative_Active_Present = inflection;
+            PresentTense.Indicative_Active_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", false);
 
-            suffix = Suffixes.Where(s => s.Conjugation == 1.0m && s.Mood == "Subjunctive" && s.Passive == false && s.Tense == "Present").FirstOrDefault();
-
-            inflection = new Inflection();
-            inflection.singular_first = $"{stem}{suffix.singular_first}";
-            inflection.singular_second = $"{stem}{suffix.singular_second}";
-            inflection.singular_third = $"{stem}{suffix.singular_third}";
-
-            inflection.plural_first = $"{stem}{suffix.plural_first}";
-            inflection.plural_second = $"{stem}{suffix.plural_second}";
-            inflection.plural_third = $"{stem}{suffix.plural_third}";
+            PresentTense.Subjunctive_Active_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", false);
                         
-            PresentTense.Subjunctive_Active_Present = inflection;
-
-
-            suffix = Suffixes.Where(s => s.Conjugation == 1.0m && s.Mood == "Indicative" && s.Passive == true && s.Tense == "Present").FirstOrDefault();
-
-            inflection = new Inflection();
-            inflection.singular_first = $"{stem}{suffix.singular_first}";
-
-            if (suffix.singular_second.Contains(','))
-            {
-                string[] segments = suffix.singular_second.Split(',');
-
-                foreach (var segment in segments)
-                {
-                    inflection.singular_second += $"{stem}{segment}, ";
-                }
-
-                inflection.singular_second = inflection.singular_second.Remove(inflection.singular_second.Length - 2);
-            }
-            else
-            {
-                inflection.singular_second = $"{stem}{suffix.singular_second}";
-            }
-
-            
-            inflection.singular_third = $"{stem}{suffix.singular_third}";
-
-            inflection.plural_first = $"{stem}{suffix.plural_first}";
-            inflection.plural_second = $"{stem}{suffix.plural_second}";
-            inflection.plural_third = $"{stem}{suffix.plural_third}";
-
-            PresentTense.Indicative_Passive_Present = inflection;
-
-            suffix = Suffixes.Where(s => s.Conjugation == 1.0m && s.Mood == "Subjunctive" && s.Passive == true && s.Tense == "Present").FirstOrDefault();
-
-            inflection = new Inflection();
-            inflection.singular_first = $"{stem}{suffix.singular_first}";
-
-            if (suffix.singular_second.Contains(','))
-            {
-                string[] segments = suffix.singular_second.Split(',');
-
-                foreach (var segment in segments)
-                {
-                    inflection.singular_second += $"{stem}{segment}, ";
-                }
-
-                inflection.singular_second = inflection.singular_second.Remove(inflection.singular_second.Length - 2);
-            }
-            else
-            {
-                inflection.singular_second = $"{stem}{suffix.singular_second}";
-            }
-
-
-            inflection.singular_third = $"{stem}{suffix.singular_third}";
-
-            inflection.plural_first = $"{stem}{suffix.plural_first}";
-            inflection.plural_second = $"{stem}{suffix.plural_second}";
-            inflection.plural_third = $"{stem}{suffix.plural_third}";
-
-            PresentTense.Subjunctive_Passive_Present = inflection;
-
+            PresentTense.Indicative_Passive_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", true);
+                        
+            PresentTense.Subjunctive_Passive_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", true);
         }
 
         private async void OnSave()
