@@ -11,11 +11,7 @@ namespace ZzaDashboard.Principal_Parts
     public class PrincipalPartsEditViewModel : INotifyPropertyChanged
     {
         private PrincipalPart _principalPart;
-        private Inflection _indicative_Active_Present;
-        private Inflection _subjunctive_Active_Present;
-        private Inflection _indicative_Passive_Present;
-        private Inflection _subjunctive_Passive_Present;
-
+       
         private Tense _presentTense;
 
         private IPrincipalPartsRepsository _repository = new PrincipalPartsRepository();
@@ -51,58 +47,6 @@ namespace ZzaDashboard.Principal_Parts
                 {
                     _principalPart = value;
                     PropertyChanged(this, new PropertyChangedEventArgs("PrincipalPart"));
-                }
-            }
-        }
-
-        public Inflection Indicative_Active_Present
-        {
-            get { return _indicative_Active_Present; }
-            set
-            {
-                if (value != _indicative_Active_Present)
-                {
-                    _indicative_Active_Present = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Indicative_Active_Present"));
-                }
-            }
-        }
-
-        public Inflection Subjunctive_Active_Present
-        {
-            get { return _subjunctive_Active_Present; }
-            set
-            {
-                if (value != _subjunctive_Active_Present)
-                {
-                    _subjunctive_Active_Present = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Subjunctive_Active_Present"));
-                }
-            }
-        }
-
-        public Inflection Indicative_Passive_Present
-        {
-            get { return _indicative_Passive_Present; }
-            set
-            {
-                if (value != _indicative_Passive_Present)
-                {
-                    _indicative_Passive_Present = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Indicative_Passive_Present"));
-                }
-            }
-        }
-
-        public Inflection Subjunctive_Passive_Present
-        {
-            get { return _subjunctive_Passive_Present; }
-            set
-            {
-                if (value != _subjunctive_Passive_Present)
-                {
-                    _subjunctive_Passive_Present = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Subjunctive_Passive_Present"));
                 }
             }
         }
@@ -149,8 +93,8 @@ namespace ZzaDashboard.Principal_Parts
             inflection.plural_first = $"{stem}{suffix.plural_first}";
             inflection.plural_second = $"{stem}{suffix.plural_second}";
             inflection.plural_third = $"{stem}{suffix.plural_third}";
-
-            Subjunctive_Active_Present = inflection;
+                        
+            PresentTense.Subjunctive_Active_Present = inflection;
 
 
             suffix = Suffixes.Where(s => s.Conjugation == 1.0m && s.Mood == "Indicative" && s.Passive == true && s.Tense == "Present").FirstOrDefault();
@@ -181,7 +125,7 @@ namespace ZzaDashboard.Principal_Parts
             inflection.plural_second = $"{stem}{suffix.plural_second}";
             inflection.plural_third = $"{stem}{suffix.plural_third}";
 
-            Indicative_Passive_Present = inflection;
+            PresentTense.Indicative_Passive_Present = inflection;
 
             suffix = Suffixes.Where(s => s.Conjugation == 1.0m && s.Mood == "Subjunctive" && s.Passive == true && s.Tense == "Present").FirstOrDefault();
 
@@ -211,7 +155,7 @@ namespace ZzaDashboard.Principal_Parts
             inflection.plural_second = $"{stem}{suffix.plural_second}";
             inflection.plural_third = $"{stem}{suffix.plural_third}";
 
-            Subjunctive_Passive_Present = inflection;
+            PresentTense.Subjunctive_Passive_Present = inflection;
 
         }
 
