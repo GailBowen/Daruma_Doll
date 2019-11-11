@@ -21,9 +21,6 @@
     </i:Interaction.Triggers>
     
     <Grid x:Name="grid1">
-        
-        <!--- http://latindictionary.wikidot.com/verb:amare -->
-
       
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5"></ColumnDefinition>

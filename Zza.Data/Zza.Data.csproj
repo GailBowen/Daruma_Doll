@@ -93,6 +93,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Notes\notes.txt" />
     <Content Include="SQL_Scripts\PrincipalParts.txt" />
     <Content Include="SQL_Scripts\Setup.txt" />
     <Content Include="SQL_Scripts\ZzaDatabaseGen.sql" />
