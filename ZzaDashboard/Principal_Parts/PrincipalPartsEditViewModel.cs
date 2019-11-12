@@ -64,7 +64,7 @@ namespace ZzaDashboard.Principal_Parts
 
             TenseManager tenseManager = new TenseManager(PrincipalPart, Suffixes);
 
-            PresentTense = new Tense();
+            PresentTense = new Tense("Present");
 
             PresentTense.Indicative_Active_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", false);
 

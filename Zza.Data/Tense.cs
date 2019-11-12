@@ -9,12 +9,28 @@ namespace Zza.Data
 {
     public class Tense: INotifyPropertyChanged
     {
+        private string _name = string.Empty;
         private Inflection _indicative_Active_Present;
         private Inflection _subjunctive_Active_Present;
         private Inflection _indicative_Passive_Present;
         private Inflection _subjunctive_Passive_Present;
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+
+        public string Name
+        {
+            get { return _name; }
+            set
+            {
+                if (value != _name)
+                {
+                    _name = value;
+                    //PropertyChanged(this, new PropertyChangedEventArgs("Name"));
+                }
+            }
+        }
+
 
         public Inflection Indicative_Active_Present
         {
@@ -68,10 +84,9 @@ namespace Zza.Data
             }
         }
 
-        public Tense()
+        public Tense(string name)
         {
-          
-
+            Name = name;
         }
     }
 }
