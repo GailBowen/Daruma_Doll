@@ -38,7 +38,7 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition Height="30"></RowDefinition>
                 <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="400"></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -89,22 +89,45 @@
             <TextBlock Grid.Row="3" Grid.Column="5" Foreground="White" FontWeight="Bold" FontSize="16"
                    HorizontalAlignment="Center">Subjunctive</TextBlock>
 
-            <Border Grid.Row="4" Grid.Column="2" Background="DarkGray" Grid.ColumnSpan="4"></Border>
-            <TextBlock Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White" FontWeight="Bold" FontSize="16"
+        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
+
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" Grid.Column="2" Background="DarkGray" Grid.ColumnSpan="4"></Border>
+            <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White" FontWeight="Bold" FontSize="16"
                    HorizontalAlignment="Center"
                        Text="{Binding PresentTense.Name}"></TextBlock>
 
-            <TextBlock Grid.Row="5" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Singular 1</TextBlock>
-            <TextBlock Grid.Row="6" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">2</TextBlock>
-            <TextBlock Grid.Row="7" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">3</TextBlock>
-            <TextBlock Grid.Row="8" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Plural 1</TextBlock>
-            <TextBlock Grid.Row="9" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">2</TextBlock>
-            <TextBlock Grid.Row="10" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">3</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Singular 1</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">2</TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">3</TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Plural 1</TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">2</TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">3</TextBlock>
 
             <TextBlock 
                              Grid.Column="2"
                              TextAlignment="Center"
-                             Grid.Row="5"
+                             Grid.Row="1"
                              Text="{Binding PresentTense.Indicative_Active_Present.singular_first}"
                              Padding="0,10,15,0"
                               />
@@ -112,15 +135,15 @@
             <TextBlock 
                                  Grid.Column="2"
                                  TextAlignment="Center"
-                                 Grid.Row="6"
+                                 Grid.Row="2"
                                  Text="{Binding PresentTense.Indicative_Active_Present.singular_second}"
                                  Padding="0,10,15,0"
                                   />
 
-              <TextBlock 
+            <TextBlock 
                                  Grid.Column="2"
                                  TextAlignment="Center"
-                                 Grid.Row="7"
+                                 Grid.Row="3"
                                  Text="{Binding PresentTense.Indicative_Active_Present.singular_third}"
                                  Padding="0,10,15,0"
                                   />
@@ -128,51 +151,51 @@
 
 
 
-        <TextBlock 
+            <TextBlock 
                              Grid.Column="2"
                              TextAlignment="Center"
-                             Grid.Row="8"
+                             Grid.Row="4"
                               Text="{Binding PresentTense.Indicative_Active_Present.plural_first}"
                              Padding="0,10,15,0"
                               />
 
-        <TextBlock 
+            <TextBlock 
                                  Grid.Column="2"
                                  TextAlignment="Center"
-                                 Grid.Row="9"
+                                 Grid.Row="5"
                                  Text="{Binding PresentTense.Indicative_Active_Present.plural_second}"
                                  Padding="0,10,15,0"
                                   />
 
-        <TextBlock 
+            <TextBlock 
                                  Grid.Column="2"
                                  TextAlignment="Center"
-                                 Grid.Row="10"
+                                 Grid.Row="6"
                                  Text="{Binding PresentTense.Indicative_Active_Present.plural_third}"
                                  Padding="0,10,15,0"
                                   />
 
 
-        <TextBlock 
+            <TextBlock 
                              Grid.Column="3"
                              TextAlignment="Center"
-                             Grid.Row="5"
+                             Grid.Row="1"
                              Text="{Binding PresentTense.Subjunctive_Active_Present.singular_first}"
                              Padding="0,10,15,0"
                               />
 
-        <TextBlock 
+            <TextBlock 
                                  Grid.Column="3"
                                  TextAlignment="Center"
-                                 Grid.Row="6"
+                                 Grid.Row="2"
                                  Text="{Binding PresentTense.Subjunctive_Active_Present.singular_second}"
                                  Padding="0,10,15,0"
                                   />
 
-        <TextBlock 
+            <TextBlock 
                                  Grid.Column="3"
                                  TextAlignment="Center"
-                                 Grid.Row="7"
+                                 Grid.Row="3"
                                  Text="{Binding PresentTense.Subjunctive_Active_Present.singular_third}"
                                  Padding="0,10,15,0"
                                   />
@@ -180,51 +203,51 @@
 
 
 
-        <TextBlock 
+            <TextBlock 
                              Grid.Column="3"
                              TextAlignment="Center"
-                             Grid.Row="8"
+                             Grid.Row="4"
                               Text="{Binding PresentTense.Subjunctive_Active_Present.plural_first}"
                              Padding="0,10,15,0"
                               />
 
-        <TextBlock 
+            <TextBlock 
                                  Grid.Column="3"
                                  TextAlignment="Center"
-                                 Grid.Row="9"
+                                 Grid.Row="5"
                                  Text="{Binding PresentTense.Subjunctive_Active_Present.plural_second}"
                                  Padding="0,10,15,0"
                                   />
 
-        <TextBlock 
+            <TextBlock 
                                  Grid.Column="3"
                                  TextAlignment="Center"
-                                 Grid.Row="10"
+                                 Grid.Row="6"
                                  Text="{Binding PresentTense.Subjunctive_Active_Present.plural_third}"
                                  Padding="0,10,15,0"
                                   />
 
 
-        <TextBlock 
+            <TextBlock 
                              Grid.Column="4"
                              TextAlignment="Center"
-                             Grid.Row="5"
+                             Grid.Row="1"
                              Text="{Binding PresentTense.Indicative_Passive_Present.singular_first}"
                              Padding="0,10,15,0"
                               />
 
-        <TextBlock 
+            <TextBlock 
                                  Grid.Column="4"
                                  TextAlignment="Center"
-                                 Grid.Row="6"
+                                 Grid.Row="2"
                                  Text="{Binding PresentTense.Indicative_Passive_Present.singular_second}"
                                  Padding="0,10,15,0"
                                   />
 
-        <TextBlock 
+            <TextBlock 
                                  Grid.Column="4"
                                  TextAlignment="Center"
-                                 Grid.Row="7"
+                                 Grid.Row="3"
                                  Text="{Binding PresentTense.Indicative_Passive_Present.singular_third}"
                                  Padding="0,10,15,0"
                                   />
@@ -232,52 +255,52 @@
 
 
 
-        <TextBlock 
+            <TextBlock 
                              Grid.Column="4"
                              TextAlignment="Center"
-                             Grid.Row="8"
+                             Grid.Row="4"
                               Text="{Binding PresentTense.Indicative_Passive_Present.plural_first}"
                              Padding="0,10,15,0"
                               />
 
-        <TextBlock 
+            <TextBlock 
                                  Grid.Column="4"
                                  TextAlignment="Center"
-                                 Grid.Row="9"
+                                 Grid.Row="5"
                                  Text="{Binding PresentTense.Indicative_Passive_Present.plural_second}"
                                  Padding="0,10,15,0"
                                   />
 
-        <TextBlock 
+            <TextBlock 
                                  Grid.Column="4"
                                  TextAlignment="Center"
-                                 Grid.Row="10"
+                                 Grid.Row="6"
                                  Text="{Binding PresentTense.Indicative_Passive_Present.plural_third}"
                                  Padding="0,10,15,0"
                                   />
 
 
 
-        <TextBlock 
+            <TextBlock 
                              Grid.Column="5"
                              TextAlignment="Center"
-                             Grid.Row="5"
+                             Grid.Row="1"
                              Text="{Binding PresentTense.Subjunctive_Passive_Present.singular_first}"
                              Padding="0,10,15,0"
                               />
 
-        <TextBlock 
+            <TextBlock 
                                  Grid.Column="5"
                                  TextAlignment="Center"
-                                 Grid.Row="6"
+                                 Grid.Row="2"
                                  Text="{Binding PresentTense.Subjunctive_Passive_Present.singular_second}"
                                  Padding="0,10,15,0"
                                   />
 
-        <TextBlock 
+            <TextBlock 
                                  Grid.Column="5"
                                  TextAlignment="Center"
-                                 Grid.Row="7"
+                                 Grid.Row="3"
                                  Text="{Binding PresentTense.Subjunctive_Passive_Present.singular_third}"
                                  Padding="0,10,15,0"
                                   />
@@ -285,30 +308,36 @@
 
 
 
-        <TextBlock 
+            <TextBlock 
                              Grid.Column="5"
                              TextAlignment="Center"
-                             Grid.Row="8"
+                             Grid.Row="4"
                               Text="{Binding PresentTense.Subjunctive_Passive_Present.plural_first}"
                              Padding="0,10,15,0"
                               />
 
-        <TextBlock 
+            <TextBlock 
                                  Grid.Column="5"
                                  TextAlignment="Center"
-                                 Grid.Row="9"
+                                 Grid.Row="5"
                                  Text="{Binding PresentTense.Subjunctive_Passive_Present.plural_second}"
                                  Padding="0,10,15,0"
                                   />
 
-        <TextBlock 
+            <TextBlock 
                                  Grid.Column="5"
                                  TextAlignment="Center"
-                                 Grid.Row="10"
+                                 Grid.Row="6"
                                  Text="{Binding PresentTense.Subjunctive_Passive_Present.plural_third}"
                                  Padding="0,10,15,0"
                                   />
 
+
+        </Grid>
+
+
+
+       
 
 
     </Grid>
