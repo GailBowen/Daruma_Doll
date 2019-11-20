@@ -6,14 +6,22 @@ using System.Windows.Input;
 using Zza.Data;
 using ZzaDashboard.Services;
 using ZzaDashboard.Logic;
+using System.Collections.ObjectModel;
 
 namespace ZzaDashboard.Principal_Parts
 {
     public class PrincipalPartsEditViewModel : INotifyPropertyChanged
     {
+        private string _testString;
+        private ObservableCollection<Tense> _topp;
+
         private PrincipalPart _principalPart;
        
         private Tense _presentTense;
+
+        private Tense _imperfectTense;
+
+        private Tense _futureTense;
 
         private IPrincipalPartsRepsository _repository = new PrincipalPartsRepository();
 
@@ -26,6 +34,34 @@ namespace ZzaDashboard.Principal_Parts
 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
+
+        public string TestString
+        {
+            get { return _testString; }
+            set
+            {
+                if (value != _testString)
+                {
+                    _testString = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("TestString"));
+                }
+            }
+        }
+
+
+        public ObservableCollection<Tense> Topp
+        {
+            get { return _topp; }
+            set
+            {
+                if (value != _topp)
+                {
+                    _topp = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("Topp"));
+                }
+            }
+        }
+
         public Tense PresentTense
         {
             get { return _presentTense; }
@@ -35,6 +71,33 @@ namespace ZzaDashboard.Principal_Parts
                 {
                     _presentTense = value;
                     PropertyChanged(this, new PropertyChangedEventArgs("PresentTense"));
+                }
+            }
+        }
+
+
+        public Tense FutureTense
+        {
+            get { return _futureTense; }
+            set
+            {
+                if (value != _futureTense)
+                {
+                    _futureTense = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("FutureTense"));
+                }
+            }
+        }
+
+        public Tense ImperfectTense
+        {
+            get { return _imperfectTense; }
+            set
+            {
+                if (value != _imperfectTense)
+                {
+                    _imperfectTense = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("ImperfectTense"));
                 }
             }
         }
@@ -73,6 +136,46 @@ namespace ZzaDashboard.Principal_Parts
             PresentTense.Indicative_Passive_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", true);
                         
             PresentTense.Subjunctive_Passive_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", true);
+
+
+            FutureTense = new Tense("Future");
+
+            FutureTense.Indicative_Active_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", false);
+            
+            FutureTense.Indicative_Active_Present.singular_first = "ignōrābō";
+
+            FutureTense.Subjunctive_Active_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", false);
+
+            FutureTense.Indicative_Passive_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", true);
+
+            FutureTense.Subjunctive_Passive_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", true);
+
+
+            ImperfectTense = new Tense("Imperfect");
+
+            ImperfectTense.Indicative_Active_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", false);
+
+            ImperfectTense.Indicative_Active_Present.singular_first = "ignōrābam";
+
+            ImperfectTense.Subjunctive_Active_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", false);
+
+            ImperfectTense.Indicative_Passive_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", true);
+
+            ImperfectTense.Subjunctive_Passive_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", true);
+
+            Topp = new ObservableCollection<Tense>();
+
+            Topp.Add(PresentTense);
+
+            
+
+            Topp.Add(ImperfectTense);
+
+            
+
+            Topp.Add(FutureTense);
+
+            TestString = "Bob";
         }
 
         private async void OnSave()

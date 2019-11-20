@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Zza.Data
 {
-    public class Tense: INotifyPropertyChanged
+    public class Tense : INotifyPropertyChanged
     {
         private string _name = string.Empty;
         private Inflection _indicative_Active_Present;
@@ -26,7 +26,8 @@ namespace Zza.Data
                 if (value != _name)
                 {
                     _name = value;
-                    //PropertyChanged(this, new PropertyChangedEventArgs("Name"));
+
+                    NotifyPropertyChanged("Name");
                 }
             }
         }
@@ -40,7 +41,8 @@ namespace Zza.Data
                 if (value != _indicative_Active_Present)
                 {
                     _indicative_Active_Present = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Indicative_Active_Present"));
+
+                    NotifyPropertyChanged("Indicative_Active_Present");
                 }
             }
         }
@@ -53,7 +55,8 @@ namespace Zza.Data
                 if (value != _subjunctive_Active_Present)
                 {
                     _subjunctive_Active_Present = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Subjunctive_Active_Present"));
+
+                    NotifyPropertyChanged("Subjunctive_Active_Present");
                 }
             }
         }
@@ -66,7 +69,9 @@ namespace Zza.Data
                 if (value != _indicative_Passive_Present)
                 {
                     _indicative_Passive_Present = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Indicative_Passive_Present"));
+
+
+                    NotifyPropertyChanged("Indicative_Passive_Present");
                 }
             }
         }
@@ -79,7 +84,8 @@ namespace Zza.Data
                 if (value != _subjunctive_Passive_Present)
                 {
                     _subjunctive_Passive_Present = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Subjunctive_Passive_Present"));
+
+                    NotifyPropertyChanged("Subjunctive_Passive_Present");
                 }
             }
         }
@@ -87,6 +93,14 @@ namespace Zza.Data
         public Tense(string name)
         {
             Name = name;
+        }
+
+        protected void NotifyPropertyChanged(String propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
     }
 }
