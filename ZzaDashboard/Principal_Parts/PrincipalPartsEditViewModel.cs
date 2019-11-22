@@ -12,8 +12,7 @@ namespace ZzaDashboard.Principal_Parts
 {
     public class PrincipalPartsEditViewModel : INotifyPropertyChanged
     {
-        private string _testString;
-        private ObservableCollection<Tense> _topp;
+        private ObservableCollection<Tense> _tenses;
 
         private PrincipalPart _principalPart;
        
@@ -34,30 +33,16 @@ namespace ZzaDashboard.Principal_Parts
 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
-
-        public string TestString
+        
+        public ObservableCollection<Tense> Tenses
         {
-            get { return _testString; }
+            get { return _tenses; }
             set
             {
-                if (value != _testString)
+                if (value != _tenses)
                 {
-                    _testString = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("TestString"));
-                }
-            }
-        }
-
-
-        public ObservableCollection<Tense> Topp
-        {
-            get { return _topp; }
-            set
-            {
-                if (value != _topp)
-                {
-                    _topp = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("Topp"));
+                    _tenses = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("Tenses"));
                 }
             }
         }
@@ -163,19 +148,14 @@ namespace ZzaDashboard.Principal_Parts
 
             ImperfectTense.Subjunctive_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", true);
 
-            Topp = new ObservableCollection<Tense>();
+            Tenses = new ObservableCollection<Tense>();
 
-            Topp.Add(PresentTense);
-
+            Tenses.Add(PresentTense);
             
+            Tenses.Add(ImperfectTense);
 
-            Topp.Add(ImperfectTense);
-
-            
-
-            Topp.Add(FutureTense);
-
-            TestString = "Bob";
+            Tenses.Add(FutureTense);
+         
         }
 
         private async void OnSave()

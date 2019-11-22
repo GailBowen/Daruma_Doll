@@ -89,7 +89,7 @@
                    HorizontalAlignment="Center">Subjunctive</TextBlock>
 
         <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
-            <ItemsControl  x:Name="lstItemsClassM" ItemsSource="{Binding Path=Topp}">
+            <ItemsControl  x:Name="lstItemsClassM" ItemsSource="{Binding Path=Tenses}">
 
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
