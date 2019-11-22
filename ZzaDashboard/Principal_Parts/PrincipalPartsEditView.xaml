@@ -130,7 +130,7 @@
                              Grid.Column="2"
                              TextAlignment="Center"
                              Grid.Row="1"
-                             Text="{Binding Indicative_Active_Present.singular_first}"
+                             Text="{Binding Indicative_Active.singular_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -139,7 +139,7 @@
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="2"
-                                 Text="{Binding Indicative_Active_Present.singular_second}"
+                                 Text="{Binding Indicative_Active.singular_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -147,7 +147,7 @@
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="3"
-                                 Text="{Binding Indicative_Active_Present.singular_third}"
+                                 Text="{Binding Indicative_Active.singular_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -158,7 +158,7 @@
                              Grid.Column="2"
                              TextAlignment="Center"
                              Grid.Row="4"
-                              Text="{Binding Indicative_Active_Present.plural_first}"
+                              Text="{Binding Indicative_Active.plural_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -166,7 +166,7 @@
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="5"
-                                 Text="{Binding Indicative_Active_Present.plural_second}"
+                                 Text="{Binding Indicative_Active.plural_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -174,7 +174,7 @@
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="6"
-                                 Text="{Binding Indicative_Active_Present.plural_third}"
+                                 Text="{Binding Indicative_Active.plural_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -183,7 +183,7 @@
                              Grid.Column="3"
                              TextAlignment="Center"
                              Grid.Row="1"
-                             Text="{Binding Subjunctive_Active_Present.singular_first}"
+                             Text="{Binding Subjunctive_Active.singular_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -191,7 +191,7 @@
                                  Grid.Column="3"
                                  TextAlignment="Center"
                                  Grid.Row="2"
-                                 Text="{Binding Subjunctive_Active_Present.singular_second}"
+                                 Text="{Binding Subjunctive_Active.singular_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -199,7 +199,7 @@
                                  Grid.Column="3"
                                  TextAlignment="Center"
                                  Grid.Row="3"
-                                 Text="{Binding Subjunctive_Active_Present.singular_third}"
+                                 Text="{Binding Subjunctive_Active.singular_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -210,7 +210,7 @@
                              Grid.Column="3"
                              TextAlignment="Center"
                              Grid.Row="4"
-                              Text="{Binding Subjunctive_Active_Present.plural_first}"
+                              Text="{Binding Subjunctive_Active.plural_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -218,7 +218,7 @@
                                  Grid.Column="3"
                                  TextAlignment="Center"
                                  Grid.Row="5"
-                                 Text="{Binding Subjunctive_Active_Present.plural_second}"
+                                 Text="{Binding Subjunctive_Active.plural_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -226,7 +226,7 @@
                                  Grid.Column="3"
                                  TextAlignment="Center"
                                  Grid.Row="6"
-                                 Text="{Binding Subjunctive_Active_Present.plural_third}"
+                                 Text="{Binding Subjunctive_Active.plural_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -235,7 +235,7 @@
                              Grid.Column="4"
                              TextAlignment="Center"
                              Grid.Row="1"
-                             Text="{Binding Indicative_Passive_Present.singular_first}"
+                             Text="{Binding Indicative_Passive.singular_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -243,7 +243,7 @@
                                  Grid.Column="4"
                                  TextAlignment="Center"
                                  Grid.Row="2"
-                                 Text="{Binding Indicative_Passive_Present.singular_second}"
+                                 Text="{Binding Indicative_Passive.singular_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -251,7 +251,7 @@
                                  Grid.Column="4"
                                  TextAlignment="Center"
                                  Grid.Row="3"
-                                 Text="{Binding Indicative_Passive_Present.singular_third}"
+                                 Text="{Binding Indicative_Passive.singular_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -262,7 +262,7 @@
                              Grid.Column="4"
                              TextAlignment="Center"
                              Grid.Row="4"
-                              Text="{Binding Indicative_Passive_Present.plural_first}"
+                              Text="{Binding Indicative_Passive.plural_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -270,7 +270,7 @@
                                  Grid.Column="4"
                                  TextAlignment="Center"
                                  Grid.Row="5"
-                                 Text="{Binding Indicative_Passive_Present.plural_second}"
+                                 Text="{Binding Indicative_Passive.plural_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -278,7 +278,7 @@
                                  Grid.Column="4"
                                  TextAlignment="Center"
                                  Grid.Row="6"
-                                 Text="{Binding Indicative_Passive_Present.plural_third}"
+                                 Text="{Binding Indicative_Passive.plural_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -288,7 +288,7 @@
                              Grid.Column="5"
                              TextAlignment="Center"
                              Grid.Row="1"
-                             Text="{Binding Subjunctive_Passive_Present.singular_first}"
+                             Text="{Binding Subjunctive_Passive.singular_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -296,7 +296,7 @@
                                  Grid.Column="5"
                                  TextAlignment="Center"
                                  Grid.Row="2"
-                                 Text="{Binding Subjunctive_Passive_Present.singular_second}"
+                                 Text="{Binding Subjunctive_Passive.singular_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -304,7 +304,7 @@
                                  Grid.Column="5"
                                  TextAlignment="Center"
                                  Grid.Row="3"
-                                 Text="{Binding Subjunctive_Passive_Present.singular_third}"
+                                 Text="{Binding Subjunctive_Passive.singular_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -315,7 +315,7 @@
                              Grid.Column="5"
                              TextAlignment="Center"
                              Grid.Row="4"
-                              Text="{Binding Subjunctive_Passive_Present.plural_first}"
+                              Text="{Binding Subjunctive_Passive.plural_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -323,7 +323,7 @@
                                  Grid.Column="5"
                                  TextAlignment="Center"
                                  Grid.Row="5"
-                                 Text="{Binding Subjunctive_Passive_Present.plural_second}"
+                                 Text="{Binding Subjunctive_Passive.plural_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -331,7 +331,7 @@
                                  Grid.Column="5"
                                  TextAlignment="Center"
                                  Grid.Row="6"
-                                 Text="{Binding Subjunctive_Passive_Present.plural_third}"
+                                 Text="{Binding Subjunctive_Passive.plural_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -381,7 +381,7 @@
                              Grid.Column="2"
                              TextAlignment="Center"
                              Grid.Row="1"
-                             Text="{Binding PresentTense.Indicative_Active_Present.singular_first}"
+                             Text="{Binding PresentTense.Indicative_Active.singular_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -389,7 +389,7 @@
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="2"
-                                 Text="{Binding PresentTense.Indicative_Active_Present.singular_second}"
+                                 Text="{Binding PresentTense.Indicative_Active.singular_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -397,7 +397,7 @@
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="3"
-                                 Text="{Binding PresentTense.Indicative_Active_Present.singular_third}"
+                                 Text="{Binding PresentTense.Indicative_Active.singular_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -408,7 +408,7 @@
                              Grid.Column="2"
                              TextAlignment="Center"
                              Grid.Row="4"
-                              Text="{Binding PresentTense.Indicative_Active_Present.plural_first}"
+                              Text="{Binding PresentTense.Indicative_Active.plural_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -416,7 +416,7 @@
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="5"
-                                 Text="{Binding PresentTense.Indicative_Active_Present.plural_second}"
+                                 Text="{Binding PresentTense.Indicative_Active.plural_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -424,7 +424,7 @@
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="6"
-                                 Text="{Binding PresentTense.Indicative_Active_Present.plural_third}"
+                                 Text="{Binding PresentTense.Indicative_Active.plural_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -433,7 +433,7 @@
                              Grid.Column="3"
                              TextAlignment="Center"
                              Grid.Row="1"
-                             Text="{Binding PresentTense.Subjunctive_Active_Present.singular_first}"
+                             Text="{Binding PresentTense.Subjunctive_Active.singular_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -441,7 +441,7 @@
                                  Grid.Column="3"
                                  TextAlignment="Center"
                                  Grid.Row="2"
-                                 Text="{Binding PresentTense.Subjunctive_Active_Present.singular_second}"
+                                 Text="{Binding PresentTense.Subjunctive_Active.singular_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -449,7 +449,7 @@
                                  Grid.Column="3"
                                  TextAlignment="Center"
                                  Grid.Row="3"
-                                 Text="{Binding PresentTense.Subjunctive_Active_Present.singular_third}"
+                                 Text="{Binding PresentTense.Subjunctive_Active.singular_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -460,7 +460,7 @@
                              Grid.Column="3"
                              TextAlignment="Center"
                              Grid.Row="4"
-                              Text="{Binding PresentTense.Subjunctive_Active_Present.plural_first}"
+                              Text="{Binding PresentTense.Subjunctive_Active.plural_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -468,7 +468,7 @@
                                  Grid.Column="3"
                                  TextAlignment="Center"
                                  Grid.Row="5"
-                                 Text="{Binding PresentTense.Subjunctive_Active_Present.plural_second}"
+                                 Text="{Binding PresentTense.Subjunctive_Active.plural_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -476,7 +476,7 @@
                                  Grid.Column="3"
                                  TextAlignment="Center"
                                  Grid.Row="6"
-                                 Text="{Binding PresentTense.Subjunctive_Active_Present.plural_third}"
+                                 Text="{Binding PresentTense.Subjunctive_Active.plural_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -485,7 +485,7 @@
                              Grid.Column="4"
                              TextAlignment="Center"
                              Grid.Row="1"
-                             Text="{Binding PresentTense.Indicative_Passive_Present.singular_first}"
+                             Text="{Binding PresentTense.Indicative_Passive.singular_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -493,7 +493,7 @@
                                  Grid.Column="4"
                                  TextAlignment="Center"
                                  Grid.Row="2"
-                                 Text="{Binding PresentTense.Indicative_Passive_Present.singular_second}"
+                                 Text="{Binding PresentTense.Indicative_Passive.singular_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -501,7 +501,7 @@
                                  Grid.Column="4"
                                  TextAlignment="Center"
                                  Grid.Row="3"
-                                 Text="{Binding PresentTense.Indicative_Passive_Present.singular_third}"
+                                 Text="{Binding PresentTense.Indicative_Passive.singular_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -512,7 +512,7 @@
                              Grid.Column="4"
                              TextAlignment="Center"
                              Grid.Row="4"
-                              Text="{Binding PresentTense.Indicative_Passive_Present.plural_first}"
+                              Text="{Binding PresentTense.Indicative_Passive.plural_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -520,7 +520,7 @@
                                  Grid.Column="4"
                                  TextAlignment="Center"
                                  Grid.Row="5"
-                                 Text="{Binding PresentTense.Indicative_Passive_Present.plural_second}"
+                                 Text="{Binding PresentTense.Indicative_Passive.plural_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -528,7 +528,7 @@
                                  Grid.Column="4"
                                  TextAlignment="Center"
                                  Grid.Row="6"
-                                 Text="{Binding PresentTense.Indicative_Passive_Present.plural_third}"
+                                 Text="{Binding PresentTense.Indicative_Passive.plural_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -538,7 +538,7 @@
                              Grid.Column="5"
                              TextAlignment="Center"
                              Grid.Row="1"
-                             Text="{Binding PresentTense.Subjunctive_Passive_Present.singular_first}"
+                             Text="{Binding PresentTense.Subjunctive_Passive.singular_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -546,7 +546,7 @@
                                  Grid.Column="5"
                                  TextAlignment="Center"
                                  Grid.Row="2"
-                                 Text="{Binding PresentTense.Subjunctive_Passive_Present.singular_second}"
+                                 Text="{Binding PresentTense.Subjunctive_Passive.singular_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -554,7 +554,7 @@
                                  Grid.Column="5"
                                  TextAlignment="Center"
                                  Grid.Row="3"
-                                 Text="{Binding PresentTense.Subjunctive_Passive_Present.singular_third}"
+                                 Text="{Binding PresentTense.Subjunctive_Passive.singular_third}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -565,7 +565,7 @@
                              Grid.Column="5"
                              TextAlignment="Center"
                              Grid.Row="4"
-                              Text="{Binding PresentTense.Subjunctive_Passive_Present.plural_first}"
+                              Text="{Binding PresentTense.Subjunctive_Passive.plural_first}"
                              Padding="0,10,15,0"
                               />
 
@@ -573,7 +573,7 @@
                                  Grid.Column="5"
                                  TextAlignment="Center"
                                  Grid.Row="5"
-                                 Text="{Binding PresentTense.Subjunctive_Passive_Present.plural_second}"
+                                 Text="{Binding PresentTense.Subjunctive_Passive.plural_second}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -581,7 +581,7 @@
                                  Grid.Column="5"
                                  TextAlignment="Center"
                                  Grid.Row="6"
-                                 Text="{Binding PresentTense.Subjunctive_Passive_Present.plural_third}"
+                                 Text="{Binding PresentTense.Subjunctive_Passive.plural_third}"
                                  Padding="0,10,15,0"
                                   />
 

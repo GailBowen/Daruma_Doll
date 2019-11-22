@@ -10,10 +10,10 @@ namespace Zza.Data
     public class Tense : INotifyPropertyChanged
     {
         private string _name = string.Empty;
-        private Inflection _indicative_Active_Present;
-        private Inflection _subjunctive_Active_Present;
-        private Inflection _indicative_Passive_Present;
-        private Inflection _subjunctive_Passive_Present;
+        private Inflection _indicative_Active;
+        private Inflection _subjunctive_Active;
+        private Inflection _indicative_Passive;
+        private Inflection _subjunctive_Passive;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -33,59 +33,59 @@ namespace Zza.Data
         }
 
 
-        public Inflection Indicative_Active_Present
+        public Inflection Indicative_Active
         {
-            get { return _indicative_Active_Present; }
+            get { return _indicative_Active; }
             set
             {
-                if (value != _indicative_Active_Present)
+                if (value != _indicative_Active)
                 {
-                    _indicative_Active_Present = value;
+                    _indicative_Active = value;
 
-                    NotifyPropertyChanged("Indicative_Active_Present");
+                    NotifyPropertyChanged("Indicative_Active");
                 }
             }
         }
 
-        public Inflection Subjunctive_Active_Present
+        public Inflection Subjunctive_Active
         {
-            get { return _subjunctive_Active_Present; }
+            get { return _subjunctive_Active; }
             set
             {
-                if (value != _subjunctive_Active_Present)
+                if (value != _subjunctive_Active)
                 {
-                    _subjunctive_Active_Present = value;
+                    _subjunctive_Active = value;
 
-                    NotifyPropertyChanged("Subjunctive_Active_Present");
+                    NotifyPropertyChanged("Subjunctive_Active");
                 }
             }
         }
 
-        public Inflection Indicative_Passive_Present
+        public Inflection Indicative_Passive
         {
-            get { return _indicative_Passive_Present; }
+            get { return _indicative_Passive; }
             set
             {
-                if (value != _indicative_Passive_Present)
+                if (value != _indicative_Passive)
                 {
-                    _indicative_Passive_Present = value;
+                    _indicative_Passive = value;
 
 
-                    NotifyPropertyChanged("Indicative_Passive_Present");
+                    NotifyPropertyChanged("Indicative_Passive");
                 }
             }
         }
 
-        public Inflection Subjunctive_Passive_Present
+        public Inflection Subjunctive_Passive
         {
-            get { return _subjunctive_Passive_Present; }
+            get { return _subjunctive_Passive; }
             set
             {
-                if (value != _subjunctive_Passive_Present)
+                if (value != _subjunctive_Passive)
                 {
-                    _subjunctive_Passive_Present = value;
+                    _subjunctive_Passive = value;
 
-                    NotifyPropertyChanged("Subjunctive_Passive_Present");
+                    NotifyPropertyChanged("Subjunctive_Passive");
                 }
             }
         }

@@ -17,7 +17,7 @@ namespace ZzaDashboard.Principal_Parts
 
         private PrincipalPart _principalPart;
        
-        private Tense _presentTense;
+        private Tense Tense;
 
         private Tense _imperfectTense;
 
@@ -64,12 +64,12 @@ namespace ZzaDashboard.Principal_Parts
 
         public Tense PresentTense
         {
-            get { return _presentTense; }
+            get { return Tense; }
             set
             {
-                if (value != _presentTense)
+                if (value != Tense)
                 {
-                    _presentTense = value;
+                    Tense = value;
                     PropertyChanged(this, new PropertyChangedEventArgs("PresentTense"));
                 }
             }
@@ -129,39 +129,39 @@ namespace ZzaDashboard.Principal_Parts
 
             PresentTense = new Tense("Present");
 
-            PresentTense.Indicative_Active_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", false);
+            PresentTense.Indicative_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", false);
 
-            PresentTense.Subjunctive_Active_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", false);
+            PresentTense.Subjunctive_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", false);
                         
-            PresentTense.Indicative_Passive_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", true);
+            PresentTense.Indicative_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", true);
                         
-            PresentTense.Subjunctive_Passive_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", true);
+            PresentTense.Subjunctive_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", true);
 
 
             FutureTense = new Tense("Future");
 
-            FutureTense.Indicative_Active_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", false);
+            FutureTense.Indicative_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", false);
             
-            FutureTense.Indicative_Active_Present.singular_first = "ignōrābō";
+            FutureTense.Indicative_Active.singular_first = "ignōrābō";
 
-            FutureTense.Subjunctive_Active_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", false);
+            FutureTense.Subjunctive_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", false);
 
-            FutureTense.Indicative_Passive_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", true);
+            FutureTense.Indicative_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", true);
 
-            FutureTense.Subjunctive_Passive_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", true);
+            FutureTense.Subjunctive_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", true);
 
 
             ImperfectTense = new Tense("Imperfect");
 
-            ImperfectTense.Indicative_Active_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", false);
+            ImperfectTense.Indicative_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", false);
 
-            ImperfectTense.Indicative_Active_Present.singular_first = "ignōrābam";
+            ImperfectTense.Indicative_Active.singular_first = "ignōrābam";
 
-            ImperfectTense.Subjunctive_Active_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", false);
+            ImperfectTense.Subjunctive_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", false);
 
-            ImperfectTense.Indicative_Passive_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", true);
+            ImperfectTense.Indicative_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", true);
 
-            ImperfectTense.Subjunctive_Passive_Present = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", true);
+            ImperfectTense.Subjunctive_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", true);
 
             Topp = new ObservableCollection<Tense>();
 
