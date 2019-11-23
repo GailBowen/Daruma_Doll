@@ -125,9 +125,9 @@ namespace ZzaDashboard.Principal_Parts
 
             FutureTense = new Tense("Future");
 
-            FutureTense.Indicative_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present", false);
-            
-            FutureTense.Indicative_Active.singular_first = "ignōrābō";
+
+            FutureTense.Indicative_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Future", false);
+
 
             FutureTense.Subjunctive_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Present", false);
 
