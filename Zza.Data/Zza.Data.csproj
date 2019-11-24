@@ -96,6 +96,7 @@
     <Content Include="Notes\notes.txt" />
     <Content Include="SQL_Scripts\PrincipalParts.txt" />
     <Content Include="SQL_Scripts\Setup.txt" />
+    <Content Include="SQL_Scripts\Suffix.txt" />
     <Content Include="SQL_Scripts\ZzaDatabaseGen.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
