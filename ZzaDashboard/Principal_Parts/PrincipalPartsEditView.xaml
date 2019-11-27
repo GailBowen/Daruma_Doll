@@ -62,7 +62,7 @@
 
             <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" Text="{Binding PrincipalPart.CombinedParts}" FontWeight="Bold" FontSize="20" Foreground="Black"></TextBlock>
             <Border Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Background="IndianRed"></Border>
-            <TextBlock Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2"
+            <TextBlock Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"
                    Foreground="White" FontWeight="Bold" FontSize="18"
                    HorizontalAlignment="Center">Active</TextBlock>
 
@@ -73,7 +73,7 @@
 
 
             <Border Grid.Row="3" Grid.Column="2" Background="Black"></Border>
-            <TextBlock Grid.Row="2" Grid.Column="2" Foreground="White" FontWeight="Bold" FontSize="16"
+            <TextBlock Grid.Row="3" Grid.Column="2" Foreground="White" FontWeight="Bold" FontSize="16"
                    HorizontalAlignment="Center">Indicative</TextBlock>
 
             <Border Grid.Row="3" Grid.Column="3" Background="LightGreen"></Border>
