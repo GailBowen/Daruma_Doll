@@ -32,6 +32,8 @@ namespace ZzaDashboard.Logic
 
             inflection.singular_first = $"{stem}{suffix.singular_first}";
 
+            //TODO: Need a routine for splitting!
+
             if (suffix.singular_second.Contains(','))
             {
                 string[] segments = suffix.singular_second.Split(',');

@@ -22,6 +22,8 @@ namespace ZzaDashboard.Principal_Parts
 
         private Tense _futureTense;
 
+        private Tense _perfectTense;
+
         private IPrincipalPartsRepsository _repository = new PrincipalPartsRepository();
 
         private ISuffixRepository _suffixRepository = new SuffixRepository();
@@ -87,6 +89,19 @@ namespace ZzaDashboard.Principal_Parts
             }
         }
 
+        public Tense PerfectTense
+        {
+            get { return _perfectTense; }
+            set
+            {
+                if (value != _perfectTense)
+                {
+                    _perfectTense = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("PerfectTense"));
+                }
+            }
+        }
+
         public PrincipalPart PrincipalPart
         {
             get { return _principalPart; }
@@ -143,6 +158,9 @@ namespace ZzaDashboard.Principal_Parts
 
             ImperfectTense.Subjunctive_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Imperfect", true);
 
+            PerfectTense = new Tense("Perfect");
+            PerfectTense.Indicative_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Perfect", false);
+
             Tenses = new ObservableCollection<Tense>();
 
             Tenses.Add(PresentTense);
@@ -150,6 +168,8 @@ namespace ZzaDashboard.Principal_Parts
             Tenses.Add(ImperfectTense);
 
             Tenses.Add(FutureTense);
+
+            Tenses.Add(PerfectTense);
          
         }
 
