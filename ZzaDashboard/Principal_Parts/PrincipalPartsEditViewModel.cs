@@ -28,6 +28,8 @@ namespace ZzaDashboard.Principal_Parts
 
         private ISuffixRepository _suffixRepository = new SuffixRepository();
 
+        private IPassiveRepository _passiveRepository = new PassiveRepository();
+
         public PrincipalPartsEditViewModel()
         {
             SaveCommand = new RelayCommand(OnSave);
@@ -117,6 +119,8 @@ namespace ZzaDashboard.Principal_Parts
 
         public List<Suffix> Suffixes { get; set; }
 
+        public List<Passive> Passives { get; set; }
+
         public Guid PrincipalPartId { get; set; }
         public ICommand SaveCommand { get; set; }
 
@@ -124,6 +128,8 @@ namespace ZzaDashboard.Principal_Parts
         {
             PrincipalPart = await _repository.GetPrincipalPartAsync(PrincipalPartId);
             Suffixes = await _suffixRepository.GetSuffixsAsync();
+            Passives = await _passiveRepository.GetPassivesAsync();
+            
 
             TenseManager tenseManager = new TenseManager(PrincipalPart, Suffixes);
 

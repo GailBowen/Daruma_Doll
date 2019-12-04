@@ -96,7 +96,9 @@
     </Compile>
     <Compile Include="Principal_Parts\PrincipalPartsEditViewModel.cs" />
     <Compile Include="RelayCommand.cs" />
+    <Compile Include="Services\IPassiveRepository.cs" />
     <Compile Include="Services\ISuffixRepository.cs" />
+    <Compile Include="Services\PassiveRepository.cs" />
     <Compile Include="Services\SuffixRepository.cs" />
     <Compile Include="Services\PrincipalPartsRepository.cs" />
     <Compile Include="Services\CustomersRepository.cs" />

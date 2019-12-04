@@ -12,6 +12,8 @@ namespace ZzaDashboard.Logic
 
         public List<Suffix> _suffixes { get; set; }
 
+        public List<Passive> _passives { get; set; }
+
         public TenseManager(PrincipalPart principalPart, List<Suffix> suffixes)
         {
             _principalPart = principalPart;
