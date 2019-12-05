@@ -1,0 +1,28 @@
+﻿USE [Zza]
+GO
+/****** Object:  Table [dbo].[Passive]    Script Date: 05/12/2019 22:42:48 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Passive](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Tense] [nvarchar](20) NULL,
+	[singular_first] [nvarchar](20) NULL,
+	[singular_second] [nvarchar](20) NULL,
+	[singular_third] [nvarchar](20) NULL,
+	[plural_first] [nvarchar](20) NULL,
+	[plural_second] [nvarchar](20) NULL,
+	[plural_third] [nvarchar](20) NULL,
+ CONSTRAINT [PK_Passive] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Passive] ON 
+GO
+INSERT [dbo].[Passive] ([Id], [Tense], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) VALUES (1, N'Perfect', N'sum', N'es', N'est', N'sumus', N'estis', N'sunt')
+GO
+SET IDENTITY_INSERT [dbo].[Passive] OFF
+GO

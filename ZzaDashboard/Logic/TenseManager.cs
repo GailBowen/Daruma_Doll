@@ -25,18 +25,25 @@ namespace ZzaDashboard.Logic
 
         public Inflection CreateInflection(decimal conjugation, string mood, string tense, bool passive)
         {
-            Suffix suffix = _suffixes.Where(s => s.Conjugation == conjugation && s.Mood == mood && s.Passive == passive && s.Tense == tense).FirstOrDefault();
-
             Inflection inflection = new Inflection();
 
-            inflection.singular_first = SplitSuffix(suffix.singular_first);
-            inflection.singular_second = SplitSuffix(suffix.singular_second);
-            inflection.singular_third = SplitSuffix(suffix.singular_third);
+            if (tense == "Perfect" && passive)
+            {
 
-            inflection.plural_first = SplitSuffix(suffix.plural_first);
-            inflection.plural_second = SplitSuffix(suffix.plural_second);
-            inflection.plural_third = SplitSuffix(suffix.plural_third);
+            }
+            else
+            {
+                Suffix suffix = _suffixes.Where(s => s.Conjugation == conjugation && s.Mood == mood && s.Passive == passive && s.Tense == tense).FirstOrDefault();
 
+                inflection.singular_first = SplitSuffix(suffix.singular_first);
+                inflection.singular_second = SplitSuffix(suffix.singular_second);
+                inflection.singular_third = SplitSuffix(suffix.singular_third);
+
+                inflection.plural_first = SplitSuffix(suffix.plural_first);
+                inflection.plural_second = SplitSuffix(suffix.plural_second);
+                inflection.plural_third = SplitSuffix(suffix.plural_third);
+            }
+            
             return inflection;
         }
 
