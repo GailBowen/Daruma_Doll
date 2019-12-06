@@ -8,7 +8,7 @@ namespace ZzaDashboard.Logic
     {
         private PrincipalPart _principalPart;
 
-        private string _stem;
+        private string _presentStem;
 
         public List<Suffix> _suffixes { get; set; }
 
@@ -18,7 +18,7 @@ namespace ZzaDashboard.Logic
         {
             _principalPart = principalPart;
             
-            _stem = _principalPart.Present.Remove(_principalPart.Present.Length - 1);
+            _presentStem = _principalPart.Present.Remove(_principalPart.Present.Length - 1);
 
             _suffixes = suffixes;
         }
@@ -26,6 +26,8 @@ namespace ZzaDashboard.Logic
         public Inflection CreateInflection(decimal conjugation, string mood, string tense, bool passive)
         {
             Inflection inflection = new Inflection();
+
+            //TO DO The perfect needs to use the perfect stem!
 
             if (tense == "Perfect" && passive)
             {
@@ -35,13 +37,17 @@ namespace ZzaDashboard.Logic
             {
                 Suffix suffix = _suffixes.Where(s => s.Conjugation == conjugation && s.Mood == mood && s.Passive == passive && s.Tense == tense).FirstOrDefault();
 
-                inflection.singular_first = SplitSuffix(suffix.singular_first);
-                inflection.singular_second = SplitSuffix(suffix.singular_second);
-                inflection.singular_third = SplitSuffix(suffix.singular_third);
+                if (suffix != null)
+                {
 
-                inflection.plural_first = SplitSuffix(suffix.plural_first);
-                inflection.plural_second = SplitSuffix(suffix.plural_second);
-                inflection.plural_third = SplitSuffix(suffix.plural_third);
+                    inflection.singular_first = SplitSuffix(suffix.singular_first);
+                    inflection.singular_second = SplitSuffix(suffix.singular_second);
+                    inflection.singular_third = SplitSuffix(suffix.singular_third);
+
+                    inflection.plural_first = SplitSuffix(suffix.plural_first);
+                    inflection.plural_second = SplitSuffix(suffix.plural_second);
+                    inflection.plural_third = SplitSuffix(suffix.plural_third);
+                }
             }
             
             return inflection;
@@ -57,14 +63,14 @@ namespace ZzaDashboard.Logic
 
                 foreach (var segment in segments)
                 {
-                    inflection += $"{_stem}{segment}, ";
+                    inflection += $"{_presentStem}{segment}, ";
                 }
 
                 inflection = inflection.Remove(inflection.Length - 2);
             }
             else
             {
-                inflection = $"{_stem}{suffix}";
+                inflection = $"{_presentStem}{suffix}";
             }
 
             return inflection;
