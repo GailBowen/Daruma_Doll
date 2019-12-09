@@ -16,7 +16,7 @@ namespace ZzaDashboard.Logic
 
         public List<Passive> _passives { get; set; }
 
-        public TenseManager(PrincipalPart principalPart, List<Suffix> suffixes)
+        public TenseManager(PrincipalPart principalPart, List<Suffix> suffixes, List<Passive> passives)
         {
             _principalPart = principalPart;
             
@@ -25,34 +25,44 @@ namespace ZzaDashboard.Logic
             _supineStem = _principalPart.Supine.Remove(_principalPart.Supine.Length - 2);
 
             _suffixes = suffixes;
+
+            _passives = passives;
         }
 
-        public Inflection CreateInflection(decimal conjugation, string mood, string tense, bool passive)
+        public Inflection CreateInflection(decimal conjugation, string mood, string tense, bool isPassive)
         {
             Inflection inflection = new Inflection();
 
-            //TO DO The perfect needs to use the perfect stem!
 
-            if (tense == "Perfect" && passive)
-            {
-                Suffix suffix = _suffixes.Where(s => s.Conjugation == conjugation && s.Mood == mood && s.Passive == passive && s.Tense == tense).FirstOrDefault();
-
-            }
-            else
+            if (tense == "Perfect" && isPassive)
             {
                 Passive passive = _passives.Where(p => p.Tense == tense).FirstOrDefault();
 
                 if (passive != null)
                 {
 
-                    inflection.singular_first = $"{_presentStem}{suffix}";
-                    inflection.singular_second = SplitSuffix(suffix.singular_second);
-                    inflection.singular_third = SplitSuffix(suffix.singular_third);
+                    inflection.singular_first = $"{passive.singular_first} {_supineStem}us";
+                    inflection.singular_second = $"{passive.singular_second} {_supineStem}us";
+                    inflection.singular_third = $"{passive.singular_third} {_supineStem}us";
 
-                    inflection.plural_first = SplitSuffix(suffix.plural_first);
-                    inflection.plural_second = SplitSuffix(suffix.plural_second);
-                    inflection.plural_third = SplitSuffix(suffix.plural_third);
+                    inflection.plural_first = $"{passive.plural_first} {_supineStem}i";
+                    inflection.plural_second = $"{passive.plural_second} {_supineStem}i";
+                    inflection.plural_third = $"{passive.plural_third} {_supineStem}i";
                 }
+
+            }
+            else
+            {
+             
+                Suffix suffix = _suffixes.Where(s => s.Conjugation == conjugation && s.Mood == mood && s.Passive == isPassive && s.Tense == tense).FirstOrDefault();
+
+                inflection.singular_first = SplitSuffix(suffix.singular_first);
+                inflection.singular_second = SplitSuffix(suffix.singular_second);
+                inflection.singular_third = SplitSuffix(suffix.singular_third);
+
+                inflection.plural_first = SplitSuffix(suffix.plural_first);
+                inflection.plural_second = SplitSuffix(suffix.plural_second);
+                inflection.plural_third = SplitSuffix(suffix.plural_third);
             }
             
             return inflection;

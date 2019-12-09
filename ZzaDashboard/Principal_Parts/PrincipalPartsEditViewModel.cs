@@ -131,7 +131,7 @@ namespace ZzaDashboard.Principal_Parts
             Passives = await _passiveRepository.GetPassivesAsync();
             
 
-            TenseManager tenseManager = new TenseManager(PrincipalPart, Suffixes);
+            TenseManager tenseManager = new TenseManager(PrincipalPart, Suffixes, Passives);
 
             PresentTense = new Tense("Present");
 
@@ -166,7 +166,8 @@ namespace ZzaDashboard.Principal_Parts
 
             PerfectTense = new Tense("Perfect");
             PerfectTense.Indicative_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Perfect", false);
-            PerfectTense.Subjunctive_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Perfect", false);
+            //PerfectTense.Subjunctive_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Perfect", false);
+            PerfectTense.Indicative_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Perfect", true);
 
             Tenses = new ObservableCollection<Tense>();
 
