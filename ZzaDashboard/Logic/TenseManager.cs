@@ -36,7 +36,7 @@ namespace ZzaDashboard.Logic
 
             if (tense == "Perfect" && isPassive)
             {
-                Passive passive = _passives.Where(p => p.Tense == tense).FirstOrDefault();
+                Passive passive = _passives.Where(p => p.Tense == tense && p.Mood == mood).FirstOrDefault();
 
                 if (passive != null)
                 {

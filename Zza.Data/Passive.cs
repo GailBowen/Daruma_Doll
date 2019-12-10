@@ -9,7 +9,9 @@ namespace Zza.Data
         public int Id { get; set; }
 
         public string Tense { get; set; }
-        
+
+        public string Mood { get; set; }
+
         public string singular_first { get; set; }
 
         public string singular_second { get; set; }
