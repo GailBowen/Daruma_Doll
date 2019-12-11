@@ -166,7 +166,7 @@ namespace ZzaDashboard.Principal_Parts
 
             PerfectTense = new Tense("Perfect");
             PerfectTense.Indicative_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Perfect", false);
-            //PerfectTense.Subjunctive_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Perfect", false);
+            PerfectTense.Subjunctive_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Perfect", false);
             PerfectTense.Indicative_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Perfect", true);
 
             PerfectTense.Subjunctive_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Perfect", true);
