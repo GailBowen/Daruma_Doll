@@ -125,3 +125,15 @@ INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singula
 GO
 SET IDENTITY_INSERT [dbo].[Suffix] OFF
 GO
+
+
+
+
+
+SET IDENTITY_INSERT [dbo].[Suffix] ON
+
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (15, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Pluperfect', 0, N'āveram', N'āverās', N'āverat', N'āverāmus', N'āverātis', N'āverant')
+
+
+SET IDENTITY_INSERT [dbo].[Suffix] OFF

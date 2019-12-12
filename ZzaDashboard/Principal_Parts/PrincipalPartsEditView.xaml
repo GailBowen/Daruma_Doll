@@ -7,7 +7,8 @@
              xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
              x:Class="ZzaDashboard.Principal_Parts.PrincipalPartsEditView"
              mc:Ignorable="d"
-             d:DesignWidth="3000">
+             d:DesignWidth="3000"
+             Height="50000">
     <UserControl.DataContext>
         <!--<local:PrincipalPartsEditViewModel PrincipalPartId="D3ECE85B-95AA-4056-B09F-A59688DED8F6" />-->
         <local:PrincipalPartsEditViewModel PrincipalPartId="7B115CA5-2B7C-45EB-9883-3A205151C13E" />
