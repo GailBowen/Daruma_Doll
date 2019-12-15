@@ -199,7 +199,7 @@ namespace ZzaDashboard.Principal_Parts
 
             Tenses.Add(FutureTense);
 
-            //Tenses.Add(PerfectTense);
+            Tenses.Add(PerfectTense);
 
             Tenses.Add(PluperfectTense);
 
