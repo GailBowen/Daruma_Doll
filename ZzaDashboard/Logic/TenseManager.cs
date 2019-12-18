@@ -34,7 +34,7 @@ namespace ZzaDashboard.Logic
             Inflection inflection = new Inflection();
 
 
-            if (tense == "Perfect" && isPassive)
+            if ((tense == "Perfect" || tense == "Pluperfect") && isPassive)
             {
                 Passive passive = _passives.Where(p => p.Tense == tense && p.Mood == mood).FirstOrDefault();
 

@@ -190,6 +190,11 @@ namespace ZzaDashboard.Principal_Parts
 
             PluperfectTense = new Tense("Pluperfect");
             PluperfectTense.Indicative_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Pluperfect", false);
+            PluperfectTense.Indicative_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Pluperfect", true);
+            PluperfectTense.Subjunctive_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Pluperfect", false);
+            PluperfectTense.Subjunctive_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Pluperfect", true);
+
+            //essem, forem	essēs, forēs	esset, foret	essēmus, forēmus	essētis, forētis	essent, forent
 
             Tenses = new ObservableCollection<Tense>();
 
