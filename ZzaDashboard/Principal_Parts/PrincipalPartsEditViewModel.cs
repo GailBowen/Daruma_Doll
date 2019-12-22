@@ -26,6 +26,8 @@ namespace ZzaDashboard.Principal_Parts
 
         private Tense _pluperfectTense;
 
+        private Tense _futurePerfectTense;
+
         private IPrincipalPartsRepsository _repository = new PrincipalPartsRepository();
 
         private ISuffixRepository _suffixRepository = new SuffixRepository();
@@ -119,6 +121,19 @@ namespace ZzaDashboard.Principal_Parts
             }
         }
 
+        public Tense FuturePerfectTense
+        {
+            get { return _futurePerfectTense; }
+            set
+            {
+                if (value != _futurePerfectTense)
+                {
+                    _futurePerfectTense = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("FuturePerfectTense"));
+                }
+            }
+        }
+
 
         public PrincipalPart PrincipalPart
         {
@@ -194,7 +209,8 @@ namespace ZzaDashboard.Principal_Parts
             PluperfectTense.Subjunctive_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Pluperfect", false);
             PluperfectTense.Subjunctive_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Subjunctive", "Pluperfect", true);
 
-            //essem, forem	essēs, forēs	esset, foret	essēmus, forēmus	essētis, forētis	essent, forent
+            FuturePerfectTense = new Tense("Future Perfect");
+            FuturePerfectTense.Indicative_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Future Perfect", false);
 
             Tenses = new ObservableCollection<Tense>();
 
@@ -207,6 +223,8 @@ namespace ZzaDashboard.Principal_Parts
             Tenses.Add(PerfectTense);
 
             Tenses.Add(PluperfectTense);
+
+            Tenses.Add(FuturePerfectTense);
 
         }
 
