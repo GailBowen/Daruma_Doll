@@ -54,6 +54,8 @@ INSERT [dbo].[Passive] ([Id], [Tense], [Mood], [singular_first], [singular_secon
 GO
 INSERT [dbo].[Passive] ([Id], [Tense], [Mood], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) VALUES (4, N'Pluperfect', N'Subjunctive', N'essem/forem', N'essēs/forēs', N'esset/foret', N'essēmus/forēmus', N'essētis/forētis', N'essent/forent')
 GO
+INSERT [dbo].[Passive] ([Id], [Tense], [Mood], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) VALUES 
+(5, N'Future Perfect', N'Indicative', N'erō', N'eris/ere', N'erit', N'erimus', N'eritis', N'erunt')
 SET IDENTITY_INSERT [dbo].[Passive] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Suffix] ON 

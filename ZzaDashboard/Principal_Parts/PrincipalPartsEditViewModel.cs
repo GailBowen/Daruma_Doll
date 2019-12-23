@@ -211,6 +211,7 @@ namespace ZzaDashboard.Principal_Parts
 
             FuturePerfectTense = new Tense("Future Perfect");
             FuturePerfectTense.Indicative_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Future Perfect", false);
+            FuturePerfectTense.Indicative_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Future Perfect", true);
 
             Tenses = new ObservableCollection<Tense>();
 
