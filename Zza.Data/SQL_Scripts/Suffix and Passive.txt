@@ -93,6 +93,11 @@ GO
 INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
 VALUES (1015, CAST(1.0 AS Decimal(2, 1)), 
 N'Indicative', N'Future Perfect', 0, N'āverō', N'āveris', N'āverit', N'āverimuss', N'āveritis', N'āverint')
+
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (1016, CAST(1.0 AS Decimal(2, 1)), 
+N'Indicative', N'Present Imperative', 0, N'', N'ā', N'', N'', N'āte', N'')
+
 SET IDENTITY_INSERT [dbo].[Suffix] OFF
 GO
 ALTER TABLE [dbo].[Suffix]  WITH CHECK ADD FOREIGN KEY([Conjugation])

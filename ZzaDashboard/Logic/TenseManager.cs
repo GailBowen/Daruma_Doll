@@ -85,7 +85,8 @@ namespace ZzaDashboard.Logic
             }
             else
             {
-                inflection = $"{_presentStem}{suffix}";
+                if (string.IsNullOrEmpty(suffix) == false)
+                    inflection = $"{_presentStem}{suffix}";
             }
 
             return inflection;
