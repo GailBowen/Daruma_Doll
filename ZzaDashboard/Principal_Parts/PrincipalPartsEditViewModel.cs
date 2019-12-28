@@ -231,7 +231,7 @@ namespace ZzaDashboard.Principal_Parts
 
             PresentImperativeTense = new Tense("Present Imperative");
             PresentImperativeTense.Indicative_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present Imperative", false);
-
+            PresentImperativeTense.Indicative_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present Imperative", true);
 
             Tenses = new ObservableCollection<Tense>();
 
