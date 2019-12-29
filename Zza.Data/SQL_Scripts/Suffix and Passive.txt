@@ -106,6 +106,10 @@ INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singula
 VALUES (1018, CAST(1.0 AS Decimal(2, 1)), 
 N'Indicative', N'Future Imperative', 0, N'', N'ātō', N'ātō', N'', N'ātōte', N'antō')
 
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (1019, CAST(1.0 AS Decimal(2, 1)), 
+N'Indicative', N'Future Imperative', 1, N'', N'ātor', N'ātor', N'', N'', N'antor')
+
 SET IDENTITY_INSERT [dbo].[Suffix] OFF
 GO
 ALTER TABLE [dbo].[Suffix]  WITH CHECK ADD FOREIGN KEY([Conjugation])
