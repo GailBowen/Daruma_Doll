@@ -30,6 +30,8 @@ namespace ZzaDashboard.Principal_Parts
 
         private Tense _presentImperativeTense;
 
+        private Tense _futureImperativeTense;
+
         private IPrincipalPartsRepsository _repository = new PrincipalPartsRepository();
 
         private ISuffixRepository _suffixRepository = new SuffixRepository();
@@ -151,6 +153,20 @@ namespace ZzaDashboard.Principal_Parts
         }
 
 
+        public Tense FutureImperativeTense
+        {
+            get { return _futureImperativeTense; }
+            set
+            {
+                if (value != _futureImperativeTense)
+                {
+                    _futureImperativeTense = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("FutureImperativeTense"));
+                }
+            }
+        }
+
+
         public PrincipalPart PrincipalPart
         {
             get { return _principalPart; }
@@ -233,6 +249,11 @@ namespace ZzaDashboard.Principal_Parts
             PresentImperativeTense.Indicative_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present Imperative", false);
             PresentImperativeTense.Indicative_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Present Imperative", true);
 
+            FutureImperativeTense = new Tense("Future Imperative");
+            FutureImperativeTense.Indicative_Active = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Future Imperative", false);
+            FutureImperativeTense.Indicative_Passive = tenseManager.CreateInflection(PrincipalPart.Conjugation, "Indicative", "Future Imperative", true);
+
+
             Tenses = new ObservableCollection<Tense>();
 
             Tenses.Add(PresentTense);
@@ -248,6 +269,8 @@ namespace ZzaDashboard.Principal_Parts
             Tenses.Add(FuturePerfectTense);
 
             Tenses.Add(PresentImperativeTense);
+
+            Tenses.Add(FutureImperativeTense);
 
         }
 
