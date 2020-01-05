@@ -38,7 +38,7 @@
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="4000"></RowDefinition>
+                <RowDefinition Height="1000"></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -89,8 +89,8 @@
             <TextBlock Grid.Row="3" Grid.Column="5" Foreground="White" FontWeight="Bold" FontSize="16"
                    HorizontalAlignment="Center">Passive</TextBlock>
 
-        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
-            <ItemsControl  x:Name="lstItemsClassM" ItemsSource="{Binding Path=Tenses}">
+        <ScrollViewer  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
+            <ItemsControl  x:Name="lstItemsClassM" ItemsSource="{Binding Path=Tenses}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
 
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
@@ -115,9 +115,9 @@
                             <RowDefinition></RowDefinition>
                         </Grid.RowDefinitions>
 
-                        <Border Grid.Row="0" Grid.Column="2" Background="DarkGray" Grid.ColumnSpan="4"></Border>
+                            <Border Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="4" Background="DarkGray" Margin="4,0,-17,0"></Border>
                         
-                            <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White" FontWeight="Bold" FontSize="16"
+                            <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White"  FontWeight="Bold" FontSize="16"
                             HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
 
                             <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Singular 1</TextBlock>
@@ -341,258 +341,7 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
-        </Grid>
-
-        <!--<Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
-
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="5"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition Width="30"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30"></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-
-            <Border Grid.Row="0" Grid.Column="2" Background="DarkGray" Grid.ColumnSpan="4"></Border>
-            <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White" FontWeight="Bold" FontSize="16"
-                   HorizontalAlignment="Center"
-                       Text="{Binding PresentTense.Name}"></TextBlock>
-
-            <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Singular 1</TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">2</TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">3</TextBlock>
-            <TextBlock Grid.Row="4" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Plural 1</TextBlock>
-            <TextBlock Grid.Row="5" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">2</TextBlock>
-            <TextBlock Grid.Row="6" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">3</TextBlock>
-
-            <TextBlock 
-                             Grid.Column="2"
-                             TextAlignment="Center"
-                             Grid.Row="1"
-                             Text="{Binding PresentTense.Indicative_Active.singular_first}"
-                             Padding="0,10,15,0"
-                              />
-
-            <TextBlock 
-                                 Grid.Column="2"
-                                 TextAlignment="Center"
-                                 Grid.Row="2"
-                                 Text="{Binding PresentTense.Indicative_Active.singular_second}"
-                                 Padding="0,10,15,0"
-                                  />
-
-            <TextBlock 
-                                 Grid.Column="2"
-                                 TextAlignment="Center"
-                                 Grid.Row="3"
-                                 Text="{Binding PresentTense.Indicative_Active.singular_third}"
-                                 Padding="0,10,15,0"
-                                  />
-
-
-
-
-            <TextBlock 
-                             Grid.Column="2"
-                             TextAlignment="Center"
-                             Grid.Row="4"
-                              Text="{Binding PresentTense.Indicative_Active.plural_first}"
-                             Padding="0,10,15,0"
-                              />
-
-            <TextBlock 
-                                 Grid.Column="2"
-                                 TextAlignment="Center"
-                                 Grid.Row="5"
-                                 Text="{Binding PresentTense.Indicative_Active.plural_second}"
-                                 Padding="0,10,15,0"
-                                  />
-
-            <TextBlock 
-                                 Grid.Column="2"
-                                 TextAlignment="Center"
-                                 Grid.Row="6"
-                                 Text="{Binding PresentTense.Indicative_Active.plural_third}"
-                                 Padding="0,10,15,0"
-                                  />
-
-
-            <TextBlock 
-                             Grid.Column="3"
-                             TextAlignment="Center"
-                             Grid.Row="1"
-                             Text="{Binding PresentTense.Subjunctive_Active.singular_first}"
-                             Padding="0,10,15,0"
-                              />
-
-            <TextBlock 
-                                 Grid.Column="3"
-                                 TextAlignment="Center"
-                                 Grid.Row="2"
-                                 Text="{Binding PresentTense.Subjunctive_Active.singular_second}"
-                                 Padding="0,10,15,0"
-                                  />
-
-            <TextBlock 
-                                 Grid.Column="3"
-                                 TextAlignment="Center"
-                                 Grid.Row="3"
-                                 Text="{Binding PresentTense.Subjunctive_Active.singular_third}"
-                                 Padding="0,10,15,0"
-                                  />
-
-
-
-
-            <TextBlock 
-                             Grid.Column="3"
-                             TextAlignment="Center"
-                             Grid.Row="4"
-                              Text="{Binding PresentTense.Subjunctive_Active.plural_first}"
-                             Padding="0,10,15,0"
-                              />
-
-            <TextBlock 
-                                 Grid.Column="3"
-                                 TextAlignment="Center"
-                                 Grid.Row="5"
-                                 Text="{Binding PresentTense.Subjunctive_Active.plural_second}"
-                                 Padding="0,10,15,0"
-                                  />
-
-            <TextBlock 
-                                 Grid.Column="3"
-                                 TextAlignment="Center"
-                                 Grid.Row="6"
-                                 Text="{Binding PresentTense.Subjunctive_Active.plural_third}"
-                                 Padding="0,10,15,0"
-                                  />
-
-
-            <TextBlock 
-                             Grid.Column="4"
-                             TextAlignment="Center"
-                             Grid.Row="1"
-                             Text="{Binding PresentTense.Indicative_Passive.singular_first}"
-                             Padding="0,10,15,0"
-                              />
-
-            <TextBlock 
-                                 Grid.Column="4"
-                                 TextAlignment="Center"
-                                 Grid.Row="2"
-                                 Text="{Binding PresentTense.Indicative_Passive.singular_second}"
-                                 Padding="0,10,15,0"
-                                  />
-
-            <TextBlock 
-                                 Grid.Column="4"
-                                 TextAlignment="Center"
-                                 Grid.Row="3"
-                                 Text="{Binding PresentTense.Indicative_Passive.singular_third}"
-                                 Padding="0,10,15,0"
-                                  />
-
-
-
-
-            <TextBlock 
-                             Grid.Column="4"
-                             TextAlignment="Center"
-                             Grid.Row="4"
-                              Text="{Binding PresentTense.Indicative_Passive.plural_first}"
-                             Padding="0,10,15,0"
-                              />
-
-            <TextBlock 
-                                 Grid.Column="4"
-                                 TextAlignment="Center"
-                                 Grid.Row="5"
-                                 Text="{Binding PresentTense.Indicative_Passive.plural_second}"
-                                 Padding="0,10,15,0"
-                                  />
-
-            <TextBlock 
-                                 Grid.Column="4"
-                                 TextAlignment="Center"
-                                 Grid.Row="6"
-                                 Text="{Binding PresentTense.Indicative_Passive.plural_third}"
-                                 Padding="0,10,15,0"
-                                  />
-
-
-
-            <TextBlock 
-                             Grid.Column="5"
-                             TextAlignment="Center"
-                             Grid.Row="1"
-                             Text="{Binding PresentTense.Subjunctive_Passive.singular_first}"
-                             Padding="0,10,15,0"
-                              />
-
-            <TextBlock 
-                                 Grid.Column="5"
-                                 TextAlignment="Center"
-                                 Grid.Row="2"
-                                 Text="{Binding PresentTense.Subjunctive_Passive.singular_second}"
-                                 Padding="0,10,15,0"
-                                  />
-
-            <TextBlock 
-                                 Grid.Column="5"
-                                 TextAlignment="Center"
-                                 Grid.Row="3"
-                                 Text="{Binding PresentTense.Subjunctive_Passive.singular_third}"
-                                 Padding="0,10,15,0"
-                                  />
-
-
-
-
-            <TextBlock 
-                             Grid.Column="5"
-                             TextAlignment="Center"
-                             Grid.Row="4"
-                              Text="{Binding PresentTense.Subjunctive_Passive.plural_first}"
-                             Padding="0,10,15,0"
-                              />
-
-            <TextBlock 
-                                 Grid.Column="5"
-                                 TextAlignment="Center"
-                                 Grid.Row="5"
-                                 Text="{Binding PresentTense.Subjunctive_Passive.plural_second}"
-                                 Padding="0,10,15,0"
-                                  />
-
-            <TextBlock 
-                                 Grid.Column="5"
-                                 TextAlignment="Center"
-                                 Grid.Row="6"
-                                 Text="{Binding PresentTense.Subjunctive_Passive.plural_third}"
-                                 Padding="0,10,15,0"
-                                  />
-
-
-        </Grid>-->
-
-
-
-       
-
+        </ScrollViewer>
 
     </Grid>
     
