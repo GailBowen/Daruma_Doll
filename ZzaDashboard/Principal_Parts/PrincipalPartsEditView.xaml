@@ -38,8 +38,8 @@
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="1000"></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="700"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -89,7 +89,7 @@
             <TextBlock Grid.Row="3" Grid.Column="5" Foreground="White" FontWeight="Bold" FontSize="16"
                    HorizontalAlignment="Center">Passive</TextBlock>
 
-        <ScrollViewer  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
+            <ScrollViewer  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
             <ItemsControl  x:Name="lstItemsClassM" ItemsSource="{Binding Path=Tenses}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
 
                 <ItemsControl.ItemTemplate>
@@ -342,6 +342,10 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
+
+            <Border Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="4" Background="DarkGray"></Border>
+            <TextBlock Grid.Row="5" Grid.Column="2" Foreground="White" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="4"
+                   HorizontalAlignment="Center">Non-Finite Forms</TextBlock>
 
     </Grid>
     
