@@ -6,8 +6,11 @@
         Title="Conjugator" Height="1000" Width="1500">
     
         <Grid>
+        <ScrollViewer>
             <Principal_Parts:PrincipalPartsEditView 
                     HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+
+        </ScrollViewer>
         </Grid>
     
 </Window>

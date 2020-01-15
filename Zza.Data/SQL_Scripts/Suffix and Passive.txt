@@ -115,3 +115,42 @@ GO
 ALTER TABLE [dbo].[Suffix]  WITH CHECK ADD FOREIGN KEY([Conjugation])
 REFERENCES [dbo].[Conjugation] ([Id])
 GO
+
+
+USE [Zza]
+GO
+/****** Object:  Table [dbo].[NonFiniteSuffix]    Script Date: 15/01/2020 18:45:43 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[NonFiniteSuffix](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Conjugation] [decimal](2, 1) NULL,
+	[Mood] [nvarchar](20) NULL,
+	[Type] [nvarchar](20) NULL,
+	[Passive] [bit] NULL,
+	[present] [nvarchar](20) NULL,
+	[perfect] [nvarchar](20) NULL,
+	[future] [nvarchar](20) NULL,
+ CONSTRAINT [PK_NonFinite] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[NonFiniteSuffix] ON 
+GO
+INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future]) VALUES (1, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Infinitives', 0, N'āre', N'āvisse,āsse ', N'ātūrum esse')
+GO
+INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future]) VALUES (2, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Infinitives', 1, N'ārī,ārier', N'ātum esse', N'ātum īrī')
+GO
+INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future]) VALUES (3, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Participles', 0, N'āns', N'', N'ātūrus')
+GO
+INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future]) VALUES (4, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Participles', 1, N'', N'ātus', N'andus')
+GO
+SET IDENTITY_INSERT [dbo].[NonFiniteSuffix] OFF
+GO
+ALTER TABLE [dbo].[NonFiniteSuffix]  WITH CHECK ADD FOREIGN KEY([Conjugation])
+REFERENCES [dbo].[Conjugation] ([Id])
+GO

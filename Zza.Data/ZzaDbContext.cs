@@ -12,6 +12,7 @@ namespace Zza.Data
         public DbSet<PrincipalPart> PrincipalParts { get; set; }
 
         public DbSet<Suffix> Suffixes { get; set; }
+        public DbSet<NonFiniteSuffix> NonFiniteSuffixes { get; set; }
 
         public DbSet<Passive> Passives { get; set; }
         public DbSet<Customer> Customers { get; set; }

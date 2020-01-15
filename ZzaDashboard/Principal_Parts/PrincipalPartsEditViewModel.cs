@@ -36,6 +36,8 @@ namespace ZzaDashboard.Principal_Parts
 
         private ISuffixRepository _suffixRepository = new SuffixRepository();
 
+        private INonFiniteSuffixRepository _nonFiniteSuffixRepository = new NonFiniteSuffixRepository();
+
         private IPassiveRepository _passiveRepository = new PassiveRepository();
 
         public PrincipalPartsEditViewModel()
@@ -182,6 +184,8 @@ namespace ZzaDashboard.Principal_Parts
 
         public List<Suffix> Suffixes { get; set; }
 
+        public List<NonFiniteSuffix> NonFiniteSuffixes { get; set; }
+
         public List<Passive> Passives { get; set; }
 
         public Guid PrincipalPartId { get; set; }
@@ -191,6 +195,7 @@ namespace ZzaDashboard.Principal_Parts
         {
             PrincipalPart = await _repository.GetPrincipalPartAsync(PrincipalPartId);
             Suffixes = await _suffixRepository.GetSuffixsAsync();
+            NonFiniteSuffixes = await _nonFiniteSuffixRepository.GetNonFiniteSuffixsAsync();
             Passives = await _passiveRepository.GetPassivesAsync();
             
 

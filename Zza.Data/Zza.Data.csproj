@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="Inflection.cs" />
     <Compile Include="Passive.cs" />
+    <Compile Include="NonFiniteSuffix.cs" />
     <Compile Include="Suffix.cs" />
     <Compile Include="PrincipalPart.cs" />
     <Compile Include="Customer.cs" />
