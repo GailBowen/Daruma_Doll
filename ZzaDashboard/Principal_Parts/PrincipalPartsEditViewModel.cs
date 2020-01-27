@@ -14,9 +14,13 @@ namespace ZzaDashboard.Principal_Parts
     {
         private ObservableCollection<Tense> _tenses;
 
+        private ObservableCollection<Form> _forms;
+
         private PrincipalPart _principalPart;
        
         private Tense Tense;
+
+        private Form Form;
 
         private Tense _imperfectTense;
 
@@ -31,6 +35,8 @@ namespace ZzaDashboard.Principal_Parts
         private Tense _presentImperativeTense;
 
         private Tense _futureImperativeTense;
+
+        private Form _infinitiveForm;
 
         private IPrincipalPartsRepsository _repository = new PrincipalPartsRepository();
 
@@ -168,6 +174,32 @@ namespace ZzaDashboard.Principal_Parts
             }
         }
 
+        public ObservableCollection<Form> Forms
+        {
+            get { return _forms; }
+            set
+            {
+                if (value != _forms)
+                {
+                    _forms = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("Forms"));
+                }
+            }
+        }
+
+        public Form InfinitiveForm
+        {
+            get { return _infinitiveForm; }
+            set
+            {
+                if (value != _infinitiveForm)
+                {
+                    _infinitiveForm = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("InfinitiveForm"));
+                }
+            }
+        }
+
 
         public PrincipalPart PrincipalPart
         {
@@ -197,7 +229,12 @@ namespace ZzaDashboard.Principal_Parts
             Suffixes = await _suffixRepository.GetSuffixsAsync();
             NonFiniteSuffixes = await _nonFiniteSuffixRepository.GetNonFiniteSuffixsAsync();
             Passives = await _passiveRepository.GetPassivesAsync();
-            
+
+            FormManager formManager = new FormManager(PrincipalPart, NonFiniteSuffixes);
+
+            InfinitiveForm = new Form("Infinitive");
+
+            InfinitiveForm.Indicative_Active = formManager.CreateNonFiniteForm(PrincipalPart.Conjugation, "Indicative", "Infinitive", false);
 
             TenseManager tenseManager = new TenseManager(PrincipalPart, Suffixes, Passives);
 

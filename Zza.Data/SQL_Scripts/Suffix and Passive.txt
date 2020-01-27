@@ -141,13 +141,13 @@ CREATE TABLE [dbo].[NonFiniteSuffix](
 GO
 SET IDENTITY_INSERT [dbo].[NonFiniteSuffix] ON 
 GO
-INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future]) VALUES (1, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Infinitives', 0, N'āre', N'āvisse,āsse ', N'ātūrum esse')
+INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future]) VALUES (1, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Infinitive', 0, N'āre', N'āvisse,āsse ', N'ātūrum esse')
 GO
-INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future]) VALUES (2, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Infinitives', 1, N'ārī,ārier', N'ātum esse', N'ātum īrī')
+INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future]) VALUES (2, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Infinitive', 1, N'ārī,ārier', N'ātum esse', N'ātum īrī')
 GO
-INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future]) VALUES (3, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Participles', 0, N'āns', N'', N'ātūrus')
+INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future]) VALUES (3, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Participle', 0, N'āns', N'', N'ātūrus')
 GO
-INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future]) VALUES (4, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Participles', 1, N'', N'ātus', N'andus')
+INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future]) VALUES (4, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Participle', 1, N'', N'ātus', N'andus')
 GO
 SET IDENTITY_INSERT [dbo].[NonFiniteSuffix] OFF
 GO

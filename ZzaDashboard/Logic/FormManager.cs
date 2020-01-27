@@ -1,0 +1,75 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using Zza.Data;
+
+namespace ZzaDashboard.Logic
+{
+    public class FormManager
+    {
+        private PrincipalPart _principalPart;
+
+        private string _presentStem;
+
+        private string _supineStem;
+        
+        public List<NonFiniteSuffix> _nonFiniteSuffixes { get; set; }
+
+        public FormManager(PrincipalPart principalPart, List<NonFiniteSuffix> nonFiniteSuffixes)
+        {
+            _principalPart = principalPart;
+            
+            _presentStem = _principalPart.Present.Remove(_principalPart.Present.Length - 1);
+
+            _supineStem = _principalPart.Supine.Remove(_principalPart.Supine.Length - 2);
+
+            _nonFiniteSuffixes = nonFiniteSuffixes;
+                       
+        }
+
+        public NonFiniteForm CreateNonFiniteForm(decimal conjugation, string mood, string type, bool isPassive)
+        {
+            NonFiniteForm nonFiniteForm = new NonFiniteForm();
+ 
+            NonFiniteSuffix nonFiniteSuffix = _nonFiniteSuffixes.Where(s => s.Conjugation == conjugation && s.Mood == mood && s.Passive == isPassive && s.Type == type).FirstOrDefault();
+
+            nonFiniteForm.present = SplitSuffix(nonFiniteSuffix.present);
+            nonFiniteForm.future = SplitSuffix(nonFiniteSuffix.future);
+            nonFiniteForm.perfect = SplitSuffix(nonFiniteSuffix.perfect);
+
+            return nonFiniteForm;
+        }
+
+        public string SplitSuffix(string suffix)
+        {
+            string inflection = string.Empty;
+
+            if (suffix.Contains(','))
+            {
+                string[] segments = suffix.Split(',');
+
+                foreach (var segment in segments)
+                {
+                    inflection += $"{_presentStem}{segment}, ";
+                }
+
+                inflection = inflection.Remove(inflection.Length - 2);
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(suffix) == false)
+                    inflection = $"{_presentStem}{suffix}";
+            }
+
+            return inflection;
+        }
+
+        public string SplitPassive(string passive, bool plural)
+        {
+            string inflection = string.Empty;
+
+            inflection = $"{passive} {_supineStem}us";
+
+            return inflection;
+        }
+    }
+}

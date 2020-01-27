@@ -90,6 +90,7 @@
       <DependentUpon>CustomerEditView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Customers\CustomerEditViewModel.cs" />
+    <Compile Include="Logic\FormManager.cs" />
     <Compile Include="Logic\TenseManager.cs" />
     <Compile Include="Principal_Parts\PrincipalPartsEditView.xaml.cs">
       <DependentUpon>PrincipalPartsEditView.xaml</DependentUpon>
