@@ -236,6 +236,10 @@ namespace ZzaDashboard.Principal_Parts
 
             InfinitiveForm.Indicative_Active = formManager.CreateNonFiniteForm(PrincipalPart.Conjugation, "Indicative", "Infinitive", false);
 
+            Forms = new ObservableCollection<Form>();
+
+            Forms.Add(InfinitiveForm);
+
             TenseManager tenseManager = new TenseManager(PrincipalPart, Suffixes, Passives);
 
             PresentTense = new Tense("Present");
