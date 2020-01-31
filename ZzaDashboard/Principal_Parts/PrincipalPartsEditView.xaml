@@ -348,11 +348,6 @@
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
 
-                <!--<Border Grid.Row="1" Background="DarkGray"></Border>
-
-                <TextBlock Grid.Row="1" Foreground="White" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="4"
-                   HorizontalAlignment="Center">Non-Finite Forms</TextBlock>-->
-
                 <ItemsControl  x:Name="lstNonFinite" ItemsSource="{Binding Path=Forms}" Grid.Row="2">
 
                     <ItemsControl.ItemTemplate>
