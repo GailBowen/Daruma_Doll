@@ -90,44 +90,50 @@
                    HorizontalAlignment="Center">Passive</TextBlock>
 
             <ScrollViewer  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
-                <ItemsControl  x:Name="lstItemsClassM" ItemsSource="{Binding Path=Tenses}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
+            <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <ItemsControl  x:Name="lstItemsClassM" ItemsSource="{Binding Path=Tenses}" Grid.Row="0" >
 
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="5"></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition Width="30"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="30"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
 
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="30"></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                        </Grid.RowDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
 
-                            <Border Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="4" Background="DarkGray" Margin="4,0,-17,0"></Border>
-                        
-                            <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White"  FontWeight="Bold" FontSize="16"
+                                <Border Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="4" Background="DarkGray" Margin="4,0,-17,0"></Border>
+
+                                <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White"  FontWeight="Bold" FontSize="16"
                             HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
 
-                            <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Singular 1</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">2</TextBlock>
-                            <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">3</TextBlock>
-                            <TextBlock Grid.Row="4" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Plural 1</TextBlock>
-                            <TextBlock Grid.Row="5" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">2</TextBlock>
-                            <TextBlock Grid.Row="6" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">3</TextBlock>
+                                <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Singular 1</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">2</TextBlock>
+                                <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">3</TextBlock>
+                                <TextBlock Grid.Row="4" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Plural 1</TextBlock>
+                                <TextBlock Grid.Row="5" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">2</TextBlock>
+                                <TextBlock Grid.Row="6" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">3</TextBlock>
 
-                            <TextBlock 
+                                <TextBlock 
                              Grid.Column="2"
                              TextAlignment="Center"
                              Grid.Row="1"
@@ -136,7 +142,7 @@
                               />
 
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="2"
@@ -144,7 +150,7 @@
                                  Padding="0,10,15,0"
                                   />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="3"
@@ -155,7 +161,7 @@
 
 
 
-                            <TextBlock 
+                                <TextBlock 
                              Grid.Column="2"
                              TextAlignment="Center"
                              Grid.Row="4"
@@ -163,7 +169,7 @@
                              Padding="0,10,15,0"
                               />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="5"
@@ -171,7 +177,7 @@
                                  Padding="0,10,15,0"
                                   />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="6"
@@ -180,7 +186,7 @@
                                   />
 
 
-                            <TextBlock 
+                                <TextBlock 
                              Grid.Column="4"
                              TextAlignment="Center"
                              Grid.Row="1"
@@ -188,7 +194,7 @@
                              Padding="0,10,15,0"
                               />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="4"
                                  TextAlignment="Center"
                                  Grid.Row="2"
@@ -196,7 +202,7 @@
                                  Padding="0,10,15,0"
                                   />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="4"
                                  TextAlignment="Center"
                                  Grid.Row="3"
@@ -207,7 +213,7 @@
 
 
 
-                            <TextBlock 
+                                <TextBlock 
                              Grid.Column="4"
                              TextAlignment="Center"
                              Grid.Row="4"
@@ -215,7 +221,7 @@
                              Padding="0,10,15,0"
                               />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="4"
                                  TextAlignment="Center"
                                  Grid.Row="5"
@@ -223,7 +229,7 @@
                                  Padding="0,10,15,0"
                                   />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="4"
                                  TextAlignment="Center"
                                  Grid.Row="6"
@@ -232,7 +238,7 @@
                                   />
 
 
-                            <TextBlock 
+                                <TextBlock 
                              Grid.Column="3"
                              TextAlignment="Center"
                              Grid.Row="1"
@@ -240,7 +246,7 @@
                              Padding="0,10,15,0"
                               />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="3"
                                  TextAlignment="Center"
                                  Grid.Row="2"
@@ -248,7 +254,7 @@
                                  Padding="0,10,15,0"
                                   />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="3"
                                  TextAlignment="Center"
                                  Grid.Row="3"
@@ -259,7 +265,7 @@
 
 
 
-                            <TextBlock 
+                                <TextBlock 
                              Grid.Column="3"
                              TextAlignment="Center"
                              Grid.Row="4"
@@ -267,7 +273,7 @@
                              Padding="0,10,15,0"
                               />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="3"
                                  TextAlignment="Center"
                                  Grid.Row="5"
@@ -275,7 +281,7 @@
                                  Padding="0,10,15,0"
                                   />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="3"
                                  TextAlignment="Center"
                                  Grid.Row="6"
@@ -285,7 +291,7 @@
 
 
 
-                            <TextBlock 
+                                <TextBlock 
                              Grid.Column="5"
                              TextAlignment="Center"
                              Grid.Row="1"
@@ -293,7 +299,7 @@
                              Padding="0,10,15,0"
                               />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="5"
                                  TextAlignment="Center"
                                  Grid.Row="2"
@@ -301,7 +307,7 @@
                                  Padding="0,10,15,0"
                                   />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="5"
                                  TextAlignment="Center"
                                  Grid.Row="3"
@@ -312,7 +318,7 @@
 
 
 
-                            <TextBlock 
+                                <TextBlock 
                              Grid.Column="5"
                              TextAlignment="Center"
                              Grid.Row="4"
@@ -320,7 +326,7 @@
                              Padding="0,10,15,0"
                               />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="5"
                                  TextAlignment="Center"
                                  Grid.Row="5"
@@ -328,7 +334,7 @@
                                  Padding="0,10,15,0"
                                   />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="5"
                                  TextAlignment="Center"
                                  Grid.Row="6"
@@ -337,54 +343,52 @@
                                   />
 
 
-                        </Grid>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-            </ScrollViewer>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
 
-            <Border Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="4" Background="DarkGray"></Border>
-            <TextBlock Grid.Row="5" Grid.Column="2" Foreground="White" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="4"
-                   HorizontalAlignment="Center">Non-Finite Forms</TextBlock>
+                <!--<Border Grid.Row="1" Background="DarkGray"></Border>
 
+                <TextBlock Grid.Row="1" Foreground="White" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="4"
+                   HorizontalAlignment="Center">Non-Finite Forms</TextBlock>-->
 
-            <ScrollViewer  Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="7">
-               <ItemsControl  x:Name="lstNonFinite" ItemsSource="{Binding Path=Forms}" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="7">
+                <ItemsControl  x:Name="lstNonFinite" ItemsSource="{Binding Path=Forms}" Grid.Row="2">
 
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="5"></ColumnDefinition>
-                                <ColumnDefinition></ColumnDefinition>
-                                <ColumnDefinition></ColumnDefinition>
-                                <ColumnDefinition></ColumnDefinition>
-                                <ColumnDefinition></ColumnDefinition>
-                                <ColumnDefinition></ColumnDefinition>
-                                <ColumnDefinition Width="30"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="30"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
 
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="30"></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                            </Grid.RowDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
 
-                            <Border Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="4" Background="DarkGray" Margin="4,0,-17,0"></Border>
+                                <Border Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="4" Background="DarkGray" Margin="4,0,-17,0"></Border>
 
-                            <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White"  FontWeight="Bold" FontSize="16"
+                                <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White"  FontWeight="Bold" FontSize="16"
                             HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
 
-                            <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Present</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Perfect</TextBlock>
-                            <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Future</TextBlock>
-                        
+                                <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Present</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Perfect</TextBlock>
+                                <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Future</TextBlock>
 
-                            <TextBlock 
+
+                                <TextBlock 
                              Grid.Column="2"
                              TextAlignment="Center"
                              Grid.Row="1"
@@ -393,7 +397,7 @@
                               />
 
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="2"
@@ -401,17 +405,20 @@
                                  Padding="0,10,15,0"
                                   />
 
-                            <TextBlock 
+                                <TextBlock 
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="3"
                                  Text="{Binding Indicative_Active.future}"
                                  Padding="0,10,15,0"
                                   />
-                        </Grid>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+            </Grid>
+               
             </ScrollViewer>
 
 
