@@ -126,12 +126,12 @@
                                 <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White"  FontWeight="Bold" FontSize="16"
                             HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
 
-                                <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Singular 1</TextBlock>
-                                <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">2</TextBlock>
-                                <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">3</TextBlock>
-                                <TextBlock Grid.Row="4" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Plural 1</TextBlock>
-                                <TextBlock Grid.Row="5" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">2</TextBlock>
-                                <TextBlock Grid.Row="6" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">3</TextBlock>
+                                <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">Singular 1</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">2</TextBlock>
+                                <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">3</TextBlock>
+                                <TextBlock Grid.Row="4" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">Plural 1</TextBlock>
+                                <TextBlock Grid.Row="5" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">2</TextBlock>
+                                <TextBlock Grid.Row="6" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">3</TextBlock>
 
                                 <TextBlock 
                              Grid.Column="2"
@@ -378,9 +378,9 @@
                                 <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White"  FontWeight="Bold" FontSize="16"
                             HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
 
-                                <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Present</TextBlock>
-                                <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Perfect</TextBlock>
-                                <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0">Future</TextBlock>
+                                <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">Present</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">Perfect</TextBlock>
+                                <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">Future</TextBlock>
 
 
                                 <TextBlock 
