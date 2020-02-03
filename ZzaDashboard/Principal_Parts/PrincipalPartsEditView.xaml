@@ -384,12 +384,12 @@
 
 
                                 <TextBlock 
-                             Grid.Column="2"
-                             TextAlignment="Center"
-                             Grid.Row="1"
-                             Text="{Binding Indicative_Active.present}"
-                             Padding="0,10,15,0"
-                              />
+                                 Grid.Column="2"
+                                 TextAlignment="Center"
+                                 Grid.Row="1"
+                                 Text="{Binding Indicative_Active.present}"
+                                 Padding="0,10,15,0"
+                                  />
 
 
                                 <TextBlock 
@@ -407,6 +407,33 @@
                                  Text="{Binding Indicative_Active.future}"
                                  Padding="0,10,15,0"
                                   />
+
+                                <TextBlock 
+                                 Grid.Column="3"
+                                 TextAlignment="Center"
+                                 Grid.Row="1"
+                                 Text="{Binding Indicative_Passive.present}"
+                                 Padding="0,10,15,0"
+                                  />
+
+
+                                <TextBlock 
+                                 Grid.Column="3"
+                                 TextAlignment="Center"
+                                 Grid.Row="2"
+                                 Text="{Binding Indicative_Passive.perfect}"
+                                 Padding="0,10,15,0"
+                                  />
+
+                                <TextBlock 
+                                 Grid.Column="3"
+                                 TextAlignment="Center"
+                                 Grid.Row="3"
+                                 Text="{Binding Indicative_Passive.future}"
+                                 Padding="0,10,15,0"
+                                  />
+
+
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
