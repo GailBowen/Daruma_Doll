@@ -38,6 +38,8 @@ namespace ZzaDashboard.Principal_Parts
 
         private Form _infinitiveForm;
 
+        private Form _participleForm;
+
         private IPrincipalPartsRepsository _repository = new PrincipalPartsRepository();
 
         private ISuffixRepository _suffixRepository = new SuffixRepository();
@@ -200,6 +202,20 @@ namespace ZzaDashboard.Principal_Parts
             }
         }
 
+        public Form ParticipleForm
+        {
+            get { return _participleForm; }
+            set
+            {
+                if (value != _participleForm)
+                {
+                    _participleForm = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("ParticipleForm"));
+                }
+            }
+        }
+
+
 
         public PrincipalPart PrincipalPart
         {
@@ -232,15 +248,23 @@ namespace ZzaDashboard.Principal_Parts
 
             FormManager formManager = new FormManager(PrincipalPart, NonFiniteSuffixes);
 
+            Forms = new ObservableCollection<Form>();
+
             InfinitiveForm = new Form("Infinitive");
 
             InfinitiveForm.Indicative_Active = formManager.CreateNonFiniteForm(PrincipalPart.Conjugation, "Indicative", "Infinitive", false);
 
             InfinitiveForm.Indicative_Passive = formManager.CreateNonFiniteForm(PrincipalPart.Conjugation, "Indicative", "Infinitive", true);
 
-            Forms = new ObservableCollection<Form>();
-
             Forms.Add(InfinitiveForm);
+
+            ParticipleForm = new Form("Participle");
+
+            ParticipleForm.Indicative_Active = formManager.CreateNonFiniteForm(PrincipalPart.Conjugation, "Indicative", "Participle", false);
+
+            ParticipleForm.Indicative_Passive = formManager.CreateNonFiniteForm(PrincipalPart.Conjugation, "Indicative", "Participle", true);
+
+            Forms.Add(ParticipleForm);
 
             TenseManager tenseManager = new TenseManager(PrincipalPart, Suffixes, Passives);
 
