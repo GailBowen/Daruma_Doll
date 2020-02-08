@@ -97,9 +97,11 @@
     </Compile>
     <Compile Include="Principal_Parts\PrincipalPartsEditViewModel.cs" />
     <Compile Include="RelayCommand.cs" />
+    <Compile Include="Services\IVerbalNounSuffixRepository.cs" />
     <Compile Include="Services\IPassiveRepository.cs" />
     <Compile Include="Services\INonFiniteSuffixRepository.cs" />
     <Compile Include="Services\ISuffixRepository.cs" />
+    <Compile Include="Services\VerbalNounSuffixRepository.cs" />
     <Compile Include="Services\PassiveRepository.cs" />
     <Compile Include="Services\NonFiniteSuffixRepository.cs" />
     <Compile Include="Services\SuffixRepository.cs" />

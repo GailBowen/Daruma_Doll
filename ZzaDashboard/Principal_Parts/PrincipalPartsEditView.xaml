@@ -348,7 +348,7 @@
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
 
-                <ItemsControl  x:Name="lstNonFinite" ItemsSource="{Binding Path=Forms}" Grid.Row="2">
+                <ItemsControl  x:Name="lstNonFinite" ItemsSource="{Binding Path=Forms}" Grid.Row="1">
 
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
@@ -438,6 +438,78 @@
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
+
+                <!--<ItemsControl  x:Name="lstVerbalNouns" ItemsSource="{Binding Path=VerbalNouns}" Grid.Row="2">
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5"></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="30"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Border Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="4" Background="DarkGray" Margin="4,0,-17,0"></Border>
+
+                                <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White"  FontWeight="Bold" FontSize="16"
+                            HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
+
+                                <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">Accusative</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">Genitive</TextBlock>
+                                <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">Dative</TextBlock>
+                                <TextBlock Grid.Row="4" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">Ablative</TextBlock>
+
+
+                                <TextBlock 
+                                 Grid.Column="2"
+                                 TextAlignment="Center"
+                                 Grid.Row="1"
+                                 Text="{Binding Indicative_Active.Accusative}"
+                                 Padding="0,10,15,0"
+                                  />
+
+
+                                <TextBlock 
+                                 Grid.Column="2"
+                                 TextAlignment="Center"
+                                 Grid.Row="2"
+                                 Text="{Binding Indicative_Active.Genitive}"
+                                 Padding="0,10,15,0"
+                                  />
+
+                                <TextBlock 
+                                 Grid.Column="2"
+                                 TextAlignment="Center"
+                                 Grid.Row="3"
+                                 Text="{Binding Indicative_Active.Dative}"
+                                 Padding="0,10,15,0"
+                                  />
+
+                                <TextBlock 
+                                 Grid.Column="2"
+                                 TextAlignment="Center"
+                                 Grid.Row="3"
+                                 Text="{Binding Indicative_Active.Ablative}"
+                                 Padding="0,10,15,0"
+                                  />
+                                
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>-->
 
             </Grid>
                

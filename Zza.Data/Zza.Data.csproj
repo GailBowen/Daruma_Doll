@@ -75,6 +75,7 @@
     <Compile Include="FormMood.cs" />
     <Compile Include="NonFiniteForm.cs" />
     <Compile Include="Inflection.cs" />
+    <Compile Include="VerbalNounSuffix.cs" />
     <Compile Include="Passive.cs" />
     <Compile Include="NonFiniteSuffix.cs" />
     <Compile Include="Suffix.cs" />
