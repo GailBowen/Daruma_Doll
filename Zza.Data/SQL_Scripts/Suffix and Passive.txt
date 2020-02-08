@@ -154,3 +154,38 @@ GO
 ALTER TABLE [dbo].[NonFiniteSuffix]  WITH CHECK ADD FOREIGN KEY([Conjugation])
 REFERENCES [dbo].[Conjugation] ([Id])
 GO
+
+
+
+USE [Zza]
+GO
+/****** Object:  Table [dbo].[VerbalNounSuffix]    Script Date: 08/02/2020 10:03:50 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[VerbalNounSuffix](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Conjugation] [decimal](2, 1) NULL,
+	[Type] [nvarchar](20) NULL,
+	[Accusative] [nvarchar](20) NULL,
+	[Genitive] [nvarchar](20) NULL,
+	[Dative] [nvarchar](20) NULL,
+	[Ablative] [nvarchar](20) NULL,
+ CONSTRAINT [PK_VerbalNounSuffix] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[VerbalNounSuffix] ON 
+GO
+INSERT [dbo].[VerbalNounSuffix] ([Id], [Conjugation], [Type], [Accusative], [Genitive], [Dative], [Ablative]) VALUES (1, CAST(1.0 AS Decimal(2, 1)), N'Gerund', N'andum', N'andī', N'andō', N'andō')
+GO
+INSERT [dbo].[VerbalNounSuffix] ([Id], [Conjugation], [Type], [Accusative], [Genitive], [Dative], [Ablative]) VALUES (2, CAST(1.0 AS Decimal(2, 1)), N'Supine', N'ātum', NULL, NULL, N'ātū')
+GO
+SET IDENTITY_INSERT [dbo].[VerbalNounSuffix] OFF
+GO
+ALTER TABLE [dbo].[VerbalNounSuffix]  WITH CHECK ADD FOREIGN KEY([Conjugation])
+REFERENCES [dbo].[Conjugation] ([Id])
+GO
