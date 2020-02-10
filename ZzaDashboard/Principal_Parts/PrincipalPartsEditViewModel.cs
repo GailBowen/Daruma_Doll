@@ -16,6 +16,8 @@ namespace ZzaDashboard.Principal_Parts
 
         private ObservableCollection<Form> _forms;
 
+        private ObservableCollection<VerbalNoun> _verbalNouns;
+
         private PrincipalPart _principalPart;
        
         private Tense Tense;
@@ -37,6 +39,8 @@ namespace ZzaDashboard.Principal_Parts
         private Form _infinitiveForm;
 
         private Form _participleForm;
+
+        private VerbalNoun _gerund;
 
         private IPrincipalPartsRepsository _repository = new PrincipalPartsRepository();
 
@@ -189,6 +193,32 @@ namespace ZzaDashboard.Principal_Parts
             }
         }
 
+        public ObservableCollection<VerbalNoun> VerbalNouns
+        {
+            get { return _verbalNouns; }
+            set
+            {
+                if (value != _verbalNouns)
+                {
+                    _verbalNouns = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("VerbalNouns"));
+                }
+            }
+        }
+
+        public VerbalNoun Gerund
+        {
+            get { return _gerund; }
+            set
+            {
+                if (value != _gerund)
+                {
+                    _gerund = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("Gerund"));
+                }
+            }
+        }
+
         public Form InfinitiveForm
         {
             get { return _infinitiveForm; }
@@ -201,6 +231,7 @@ namespace ZzaDashboard.Principal_Parts
                 }
             }
         }
+
 
         public Form ParticipleForm
         {
@@ -249,10 +280,16 @@ namespace ZzaDashboard.Principal_Parts
             Passives = await _passiveRepository.GetPassivesAsync();
             VerbalNounSuffixes = await _verbalNounSuffixRepository.GetVerbalNounSuffixsAsync();
 
+            VerbalNounManager verbalNounManager = new VerbalNounManager(PrincipalPart, VerbalNounSuffixes);
+
+            VerbalNouns = new ObservableCollection<VerbalNoun>();
+
+            Gerund = verbalNounManager.CreateVerbalNoun(PrincipalPart.Conjugation, "Gerund");
+
             FormManager formManager = new FormManager(PrincipalPart, NonFiniteSuffixes);
-
+            
             Forms = new ObservableCollection<Form>();
-
+                       
             InfinitiveForm = new Form("Infinitive");
 
             InfinitiveForm.Indicative_Active = formManager.CreateNonFiniteForm(PrincipalPart.Conjugation, "Indicative", "Infinitive", false);

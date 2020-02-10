@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FormMood.cs" />
+    <Compile Include="VerbalNoun.cs" />
     <Compile Include="NonFiniteForm.cs" />
     <Compile Include="Inflection.cs" />
     <Compile Include="VerbalNounSuffix.cs" />
