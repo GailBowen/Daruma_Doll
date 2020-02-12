@@ -439,7 +439,7 @@
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
 
-                <!--<ItemsControl  x:Name="lstVerbalNouns" ItemsSource="{Binding Path=VerbalNouns}" Grid.Row="2">
+                <ItemsControl  x:Name="lstVerbalNouns" ItemsSource="{Binding Path=VerbalNouns}" Grid.Row="2">
 
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
@@ -477,7 +477,7 @@
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="1"
-                                 Text="{Binding Indicative_Active.Accusative}"
+                                 Text="{Binding Accusative}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -486,7 +486,7 @@
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="2"
-                                 Text="{Binding Indicative_Active.Genitive}"
+                                 Text="{Binding Genitive}"
                                  Padding="0,10,15,0"
                                   />
 
@@ -494,22 +494,22 @@
                                  Grid.Column="2"
                                  TextAlignment="Center"
                                  Grid.Row="3"
-                                 Text="{Binding Indicative_Active.Dative}"
+                                 Text="{Binding Dative}"
                                  Padding="0,10,15,0"
                                   />
 
                                 <TextBlock 
                                  Grid.Column="2"
                                  TextAlignment="Center"
-                                 Grid.Row="3"
-                                 Text="{Binding Indicative_Active.Ablative}"
+                                 Grid.Row="4"
+                                 Text="{Binding Ablative}"
                                  Padding="0,10,15,0"
                                   />
                                 
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
-                </ItemsControl>-->
+                </ItemsControl>
 
             </Grid>
                

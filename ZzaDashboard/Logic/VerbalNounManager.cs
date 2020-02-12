@@ -44,21 +44,24 @@ namespace ZzaDashboard.Logic
         {
             string inflection = string.Empty;
 
-            if (suffix.Contains(','))
+            if (string.IsNullOrEmpty(suffix) == false)
             {
-                string[] segments = suffix.Split(',');
-
-                foreach (var segment in segments)
+                if (suffix.Contains(','))
                 {
-                    inflection += $"{_presentStem}{segment}, ";
-                }
+                    string[] segments = suffix.Split(',');
 
-                inflection = inflection.Remove(inflection.Length - 2);
-            }
-            else
-            {
-                if (string.IsNullOrEmpty(suffix) == false)
-                    inflection = $"{_presentStem}{suffix}";
+                    foreach (var segment in segments)
+                    {
+                        inflection += $"{_presentStem}{segment}, ";
+                    }
+
+                    inflection = inflection.Remove(inflection.Length - 2);
+                }
+                else
+                {
+                    if (string.IsNullOrEmpty(suffix) == false)
+                        inflection = $"{_presentStem}{suffix}";
+                }
             }
 
             return inflection;

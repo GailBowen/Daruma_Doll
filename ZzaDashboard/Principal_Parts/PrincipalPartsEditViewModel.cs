@@ -42,6 +42,8 @@ namespace ZzaDashboard.Principal_Parts
 
         private VerbalNoun _gerund;
 
+        private VerbalNoun _supine;
+
         private IPrincipalPartsRepsository _repository = new PrincipalPartsRepository();
 
         private ISuffixRepository _suffixRepository = new SuffixRepository();
@@ -219,6 +221,19 @@ namespace ZzaDashboard.Principal_Parts
             }
         }
 
+        public VerbalNoun Supine
+        {
+            get { return _supine; }
+            set
+            {
+                if (value != _supine)
+                {
+                    _supine = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs("Supine"));
+                }
+            }
+        }
+
         public Form InfinitiveForm
         {
             get { return _infinitiveForm; }
@@ -286,6 +301,12 @@ namespace ZzaDashboard.Principal_Parts
 
             Gerund = verbalNounManager.CreateVerbalNoun(PrincipalPart.Conjugation, "Gerund");
 
+            VerbalNouns.Add(Gerund);
+
+            Supine = verbalNounManager.CreateVerbalNoun(PrincipalPart.Conjugation, "Supine");
+
+            VerbalNouns.Add(Supine);
+            
             FormManager formManager = new FormManager(PrincipalPart, NonFiniteSuffixes);
             
             Forms = new ObservableCollection<Form>();
