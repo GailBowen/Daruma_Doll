@@ -3,6 +3,8 @@ namespace Zza.Data
 {
     public class VerbalNoun
     {
+        public string Name { get; set; }
+
         public string Accusative { get; set; }
 
         public string Genitive { get; set; }

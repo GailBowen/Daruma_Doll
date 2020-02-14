@@ -32,6 +32,7 @@ namespace ZzaDashboard.Logic
  
             VerbalNounSuffix verbalNounSuffix = _verbalNounSuffixes.Where(s => s.Conjugation == conjugation && s.Type == type).FirstOrDefault();
 
+            verbalNoun.Name = type;
             verbalNoun.Accusative = SplitSuffix(verbalNounSuffix.Accusative);
             verbalNoun.Genitive = SplitSuffix(verbalNounSuffix.Genitive);
             verbalNoun.Dative = SplitSuffix(verbalNounSuffix.Dative);
