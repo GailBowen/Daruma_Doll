@@ -3,3 +3,17 @@
 https://www.wpf-tutorial.com/list-controls/itemscontrol/
 
 Combine FormManager & TenseManager?!?
+
+Not sure if you’re using bootstrap, but I reckon you could do something similar to the bootstrap look and feel options, with alternate striped rows (only subtly different colours) which will give each row a bit of definition. You could maybe try putting a faint (1px wide) border around each td, again to give it a bit of definition but you may not need that. A hover effect on each row would also be good to give it a bit of interaction.
+
+ 
+
+I always like trying to balance tables, and that includes using the ‘vertical-align: middle’ style, which will put the text in each td in the centre.
+
+ 
+
+I’m not sure how you’ve done it class wise, but you could maybe give the 2 columns under indictive a slightly different shade to the 2 columns under subjunctive.
+
+ 
+
+Colour-wise, this is up to you but I would normally use different shades of the same colour, but that’s just my preference.

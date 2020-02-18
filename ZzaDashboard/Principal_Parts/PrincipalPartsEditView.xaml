@@ -24,7 +24,7 @@
       
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -59,7 +59,7 @@
 
             </Grid.RowDefinitions>
 
-            <Border Grid.Row="1" Grid.Column="2"></Border>
+            <!--<Border Grid.RowSpan="5" Grid.Column="1" Background="Purple"></Border>-->
 
             <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" Text="{Binding PrincipalPart.CombinedParts}" FontWeight="Bold" FontSize="20" Foreground="Black"></TextBlock>
             <Border Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Background="IndianRed"></Border>
@@ -103,7 +103,7 @@
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="5"></ColumnDefinition>
-                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
@@ -350,12 +350,12 @@
 
                 <ItemsControl  x:Name="lstNonFinite" ItemsSource="{Binding Path=Forms}" Grid.Row="1">
 
-                    <ItemsControl.ItemTemplate>
+                <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="5"></ColumnDefinition>
-                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
@@ -446,7 +446,7 @@
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="5"></ColumnDefinition>
-                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="150"></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
