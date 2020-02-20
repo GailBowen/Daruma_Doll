@@ -121,7 +121,7 @@
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
 
-                                <Border Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="4" Background="DarkGray" Margin="4,0,-17,0"></Border>
+                                <Border Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="4" Background="DarkGray" Margin="0,0,-17,0"></Border>
 
                                 <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White"  FontWeight="Bold" FontSize="16"
                             HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
@@ -373,7 +373,7 @@
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
 
-                                <Border Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="4" Background="DarkGray" Margin="4,0,-17,0"></Border>
+                                <Border Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="4" Background="DarkGray" Margin="0,0,-17,0"></Border>
 
                                 <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White"  FontWeight="Bold" FontSize="16"
                             HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
@@ -464,8 +464,7 @@
 
                                 <Border Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="4" Background="DarkGray" Margin="4,0,-17,0"></Border>
 
-                                <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White"  FontWeight="Bold" FontSize="16"
-                            HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
+                                <Border Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="4" Background="DarkGray" Margin="0,0,-17,0"></Border>
 
                                 <TextBlock Grid.Row="1" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">Accusative</TextBlock>
                                 <TextBlock Grid.Row="2" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">Genitive</TextBlock>
