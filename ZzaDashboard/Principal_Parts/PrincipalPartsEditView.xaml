@@ -61,32 +61,32 @@
 
             <!--<Border Grid.RowSpan="5" Grid.Column="1" Background="Purple"></Border>-->
 
-            <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" Text="{Binding PrincipalPart.CombinedParts}" FontWeight="Bold" FontSize="20" Foreground="Black"></TextBlock>
-        <Border Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Background="#551A8B"></Border>
+        <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" Text="{Binding PrincipalPart.CombinedParts}" FontWeight="Bold" FontSize="20" Foreground="#EC8D7B"></TextBlock>
+        <Border Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Background="#EC8D7B"></Border>
             <TextBlock Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"
                    Foreground="White" FontWeight="Bold" FontSize="18"
                    HorizontalAlignment="Center" VerticalAlignment="Center">Indicative</TextBlock>
 
-        <Border Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Background="#7c26cb"></Border>
+        <Border Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Background="#EF8A18"></Border>
 
-            <TextBlock Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Foreground="White" FontWeight="Bold" FontSize="18"
+        <TextBlock Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Background="#EF8A18" Foreground="White" FontWeight="Bold" FontSize="18"
                    HorizontalAlignment="Center" VerticalAlignment="Center">Subjunctive</TextBlock>
 
 
-        <Border Grid.Row="3" Grid.Column="2" Background="White" BorderBrush="#551A8B" BorderThickness="4,4,0,4"></Border>
-        <TextBlock Grid.Row="3" Grid.Column="2" Foreground="#551A8B" FontWeight="Bold" FontSize="16"
+        <Border Grid.Row="3" Grid.Column="2" Background="#EC8D7B" BorderBrush="#EC8D7B" BorderThickness="15,0,0,0"></Border>
+        <TextBlock Grid.Row="3" Grid.Column="2" Background="#EC8D7B" Foreground="White" FontWeight="Bold" FontSize="16"
                    HorizontalAlignment="Center" VerticalAlignment="Center">Active</TextBlock>
 
-        <Border Grid.Row="3" Grid.Column="3" Background="White" BorderBrush="#551A8B" BorderThickness="4"></Border>
-        <TextBlock Grid.Row="3" Grid.Column="3" Foreground="#551A8B" FontWeight="Bold" FontSize="16"
+        <Border Grid.Row="3" Grid.Column="3" Background="White" BorderBrush="#EC8D7B" BorderThickness="0,0,15,0"></Border>
+        <TextBlock Grid.Row="3" Grid.Column="3" Foreground="#EC8D7B" FontWeight="Bold" FontSize="16"
                    HorizontalAlignment="Center" VerticalAlignment="Center">Passive</TextBlock>
 
-        <Border Grid.Row="3" Grid.Column="4" Background="White" BorderBrush="#7c26cb" BorderThickness="4,4,0,4"></Border>
-        <TextBlock Grid.Row="3" Grid.Column="4" Foreground="#7c26cb" FontWeight="Bold" FontSize="16"
+        <Border Grid.Row="3" Grid.Column="4" Background="#EC8D7B" BorderBrush="#EF8A18" BorderThickness="15,0,0,0"></Border>
+        <TextBlock Grid.Row="3" Grid.Column="4" Foreground="White" FontWeight="Bold" FontSize="16"
                    HorizontalAlignment="Center" VerticalAlignment="Center">Active</TextBlock>
 
-        <Border Grid.Row="3" Grid.Column="5" Background="White" BorderBrush="#7c26cb" BorderThickness="4"></Border>
-        <TextBlock Grid.Row="3" Grid.Column="5" Foreground="#7c26cb" FontWeight="Bold" FontSize="16"
+        <Border Grid.Row="3" Grid.Column="5" Background="White" BorderBrush="#EF8A18" BorderThickness="0,0,15,0"></Border>
+        <TextBlock Grid.Row="3" Grid.Column="5" Foreground="#EC8D7B" FontWeight="Bold" FontSize="16"
                    HorizontalAlignment="Center" VerticalAlignment="Center">Passive</TextBlock>
 
             <ScrollViewer  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
@@ -121,7 +121,7 @@
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
 
-                                <Border Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="4" Background="DarkGray" Margin="0,0,-17,0"></Border>
+                                <Border Grid.Row="0" Grid.Column="2"  Grid.ColumnSpan="4" Background="#252724" Margin="0,0,-17,0"></Border>
 
                                 <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Foreground="White"  FontWeight="Bold" FontSize="16"
                             HorizontalAlignment="Center" Text="{Binding Name}"></TextBlock>
