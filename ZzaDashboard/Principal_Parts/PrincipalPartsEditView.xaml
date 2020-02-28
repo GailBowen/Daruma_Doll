@@ -38,9 +38,9 @@
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
                 <RowDefinition Height="700"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="700"></RowDefinition>
+                <!--<RowDefinition Height="700"></RowDefinition>-->
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -89,8 +89,17 @@
         <TextBlock Grid.Row="3" Grid.Column="5" Foreground="#E89D38" FontWeight="Bold" FontSize="16"
                    HorizontalAlignment="Center" VerticalAlignment="Center">Passive</TextBlock>
 
-            <ScrollViewer  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
-            <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="7">
+        <Border Grid.Row="4" Grid.Column="2"  Grid.ColumnSpan="4"  Margin="0,0,0,0">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#AD0010" Offset="0"/>
+                    <GradientStop Color="#E89D38" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <ScrollViewer  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="7">
+            <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="7">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
