@@ -150,11 +150,11 @@
                                 <TextBlock Grid.Row="6" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">3</TextBlock>
 
 
-                                <Border Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="5" Background="LightGoldenrodYellow"></Border>
+                                <Border Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" Margin="0,0,-17,0"  Background="LightGoldenrodYellow"></Border>
 
-                                <Border Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="5" Background="LightGoldenrodYellow"></Border>
+                                <Border Grid.Row="3" Grid.Column="2"  Grid.ColumnSpan="4" Margin="0,0,-17,0" Background="LightGoldenrodYellow"></Border>
 
-                                <Border Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="5" Background="LightGoldenrodYellow"></Border>
+                                <Border Grid.Row="5" Grid.Column="2"  Grid.ColumnSpan="4" Margin="0,0,-17,0" Background="LightGoldenrodYellow"></Border>
 
                                 <TextBlock 
                              Grid.Column="2"
@@ -412,6 +412,11 @@
                                 <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">Future</TextBlock>
 
 
+                                <Border Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" Margin="0,0,-17,0"  Background="LightGoldenrodYellow"></Border>
+
+                                <Border Grid.Row="3" Grid.Column="2"  Grid.ColumnSpan="4" Margin="0,0,-17,0" Background="LightGoldenrodYellow"></Border>
+                               
+
                                 <TextBlock 
                                  Grid.Column="2"
                                  TextAlignment="Center"
@@ -508,6 +513,9 @@
                                 <TextBlock Grid.Row="3" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">Dative</TextBlock>
                                 <TextBlock Grid.Row="4" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">Ablative</TextBlock>
 
+                                <Border Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" Margin="0,0,-17,0"  Background="LightGoldenrodYellow"></Border>
+
+                                <Border Grid.Row="3" Grid.Column="2"  Grid.ColumnSpan="4" Margin="0,0,-17,0" Background="LightGoldenrodYellow"></Border>
 
                                 <TextBlock 
                                  Grid.Column="2"
