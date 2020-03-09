@@ -140,6 +140,13 @@
                                 <TextBlock Grid.Row="5" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">2</TextBlock>
                                 <TextBlock Grid.Row="6" Grid.Column="1" TextAlignment="Right" FontWeight="Bold" Padding="0,0,15,0" VerticalAlignment="Bottom">3</TextBlock>
 
+
+                                <Border Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="5" Background="LightGoldenrodYellow"></Border>
+
+                                <Border Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="5" Background="LightGoldenrodYellow"></Border>
+
+                                <Border Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="5" Background="LightGoldenrodYellow"></Border>
+
                                 <TextBlock 
                              Grid.Column="2"
                              TextAlignment="Center"
@@ -147,7 +154,6 @@
                              Text="{Binding Indicative_Active.singular_first}"
                              Padding="0,10,15,0"
                               />
-
 
                                 <TextBlock 
                                  Grid.Column="2"
