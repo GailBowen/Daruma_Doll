@@ -414,8 +414,9 @@ namespace ZzaDashboard.Principal_Parts
         //    PrincipalPart = await _repository.UpdatePrincipalPartAsync(PrincipalPart);
         //}
 
-        private void OnRandom()
+        private async void OnRandom()
         {
+            List<PrincipalPart> principalParts = await _repository.GetPrincipalPartsAsync();
             PrincipalPartId = new Guid("1411daa4-33c9-47fd-8cc9-81081e18f7af");
             LoadPrincipalPart();
         }
