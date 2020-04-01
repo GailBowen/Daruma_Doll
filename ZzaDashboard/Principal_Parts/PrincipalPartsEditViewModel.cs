@@ -12,6 +12,8 @@ namespace ZzaDashboard.Principal_Parts
 {
     public class PrincipalPartsEditViewModel : INotifyPropertyChanged
     {
+        public RelayCommand RandomCommand { get; private set; }
+
         private ObservableCollection<Tense> _tenses;
 
         private ObservableCollection<Form> _forms;
@@ -56,7 +58,7 @@ namespace ZzaDashboard.Principal_Parts
 
         public PrincipalPartsEditViewModel()
         {
-            SaveCommand = new RelayCommand(OnSave);
+            RandomCommand = new RelayCommand(OnRandom);
         }
 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
@@ -407,9 +409,15 @@ namespace ZzaDashboard.Principal_Parts
 
         }
 
-        private async void OnSave()
+        //private async void OnSave()
+        //{
+        //    PrincipalPart = await _repository.UpdatePrincipalPartAsync(PrincipalPart);
+        //}
+
+        private void OnRandom()
         {
-            PrincipalPart = await _repository.UpdatePrincipalPartAsync(PrincipalPart);
+            PrincipalPartId = new Guid("1411daa4-33c9-47fd-8cc9-81081e18f7af");
+            LoadPrincipalPart();
         }
 
     }
