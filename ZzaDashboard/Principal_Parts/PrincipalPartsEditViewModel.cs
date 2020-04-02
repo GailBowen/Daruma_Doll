@@ -417,7 +417,13 @@ namespace ZzaDashboard.Principal_Parts
         private async void OnRandom()
         {
             List<PrincipalPart> principalParts = await _repository.GetPrincipalPartsAsync();
-            PrincipalPartId = new Guid("1411daa4-33c9-47fd-8cc9-81081e18f7af");
+            //PrincipalPartId = new Guid("1411daa4-33c9-47fd-8cc9-81081e18f7af");
+
+            Random r = new Random();
+            int rInt = r.Next(0, principalParts.Count - 1); //for ints
+
+            PrincipalPartId = principalParts[rInt].Id;
+
             LoadPrincipalPart();
         }
 

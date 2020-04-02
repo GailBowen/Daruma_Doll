@@ -20,8 +20,11 @@ namespace ZzaDashboard.Logic
             
             _presentStem = _principalPart.Present.Remove(_principalPart.Present.Length - 1);
 
-            _supineStem = _principalPart.Supine.Remove(_principalPart.Supine.Length - 2);
-
+            if (string.IsNullOrEmpty(_principalPart.Supine) == false)
+            {
+                _supineStem = _principalPart.Supine.Remove(_principalPart.Supine.Length - 2);
+            }
+            
             _verbalNounSuffixes = verbalNounSuffixes;
                        
         }
