@@ -29,13 +29,21 @@ namespace ZzaDashboard.Logic
                        
         }
 
-        public NonFiniteForm CreateNonFiniteForm(decimal conjugation, string mood, string type, bool isPassive)
+        public NonFiniteForm CreateNonFiniteForm(decimal conjugation, string mood, string type, bool isPassive, bool isSpecial = false)
         {
             NonFiniteForm nonFiniteForm = new NonFiniteForm();
  
             NonFiniteSuffix nonFiniteSuffix = _nonFiniteSuffixes.Where(s => s.Conjugation == conjugation && s.Mood == mood && s.Passive == isPassive && s.Type == type).FirstOrDefault();
 
-            nonFiniteForm.present = SplitSuffix(nonFiniteSuffix.present);
+            if (isSpecial)
+            {
+                nonFiniteForm.present = SplitSuffix(nonFiniteSuffix.special);
+            }
+            else
+            {
+                nonFiniteForm.present = SplitSuffix(nonFiniteSuffix.present);
+            }
+            
             nonFiniteForm.future = SplitSuffix(nonFiniteSuffix.future);
             nonFiniteForm.perfect = SplitSuffix(nonFiniteSuffix.perfect);
 

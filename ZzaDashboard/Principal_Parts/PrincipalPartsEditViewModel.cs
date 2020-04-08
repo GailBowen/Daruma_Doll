@@ -317,7 +317,8 @@ namespace ZzaDashboard.Principal_Parts
 
             InfinitiveForm.Indicative_Active = formManager.CreateNonFiniteForm(PrincipalPart.Conjugation, "Indicative", "Infinitive", false);
 
-            InfinitiveForm.Indicative_Passive = formManager.CreateNonFiniteForm(PrincipalPart.Conjugation, "Indicative", "Infinitive", true);
+            InfinitiveForm.Indicative_Passive
+                = formManager.CreateNonFiniteForm(PrincipalPart.Conjugation, "Indicative", "Infinitive", true, PrincipalPart.SpecialPassiveInfinitive);
 
             Forms.Add(InfinitiveForm);
 

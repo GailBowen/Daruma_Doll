@@ -34,5 +34,7 @@ namespace Zza.Data
         public bool Defective { get; set; }
 
         public decimal Conjugation { get; set; }
+
+        public bool SpecialPassiveInfinitive { get; set; }
     }
 }

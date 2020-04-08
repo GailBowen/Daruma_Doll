@@ -21,6 +21,8 @@ namespace Zza.Data
         public string perfect { get; set; }
 
         public string future { get; set; }
-                          
+
+        public string special { get; set; }
+
     }
 }
