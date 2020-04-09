@@ -108,10 +108,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Customers\CustomerEditView.xaml.cs">
-      <DependentUpon>CustomerEditView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Customers\CustomerEditViewModel.cs" />
     <Compile Include="Logic\VerbalNounManager.cs" />
     <Compile Include="Logic\FormManager.cs" />
     <Compile Include="Logic\TenseManager.cs" />
@@ -129,15 +125,7 @@
     <Compile Include="Services\NonFiniteSuffixRepository.cs" />
     <Compile Include="Services\SuffixRepository.cs" />
     <Compile Include="Services\PrincipalPartsRepository.cs" />
-    <Compile Include="Services\CustomersRepository.cs" />
     <Compile Include="Services\IPrincipalPartsRepository.cs" />
-    <Compile Include="Services\ICustomersRepository.cs" />
-    <Compile Include="Services\IOrdersRepository.cs" />
-    <Compile Include="Services\OrdersRepository.cs" />
-    <Page Include="Customers\CustomerEditView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

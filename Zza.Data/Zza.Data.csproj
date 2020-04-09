@@ -81,11 +81,6 @@
     <Compile Include="NonFiniteSuffix.cs" />
     <Compile Include="Suffix.cs" />
     <Compile Include="PrincipalPart.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="OrderItem.cs" />
-    <Compile Include="OrderItemOption.cs" />
-    <Compile Include="OrderStatus.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductOption.cs" />
     <Compile Include="ProductSize.cs" />

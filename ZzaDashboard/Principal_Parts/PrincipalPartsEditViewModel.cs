@@ -421,7 +421,7 @@ namespace ZzaDashboard.Principal_Parts
             //PrincipalPartId = new Guid("1411daa4-33c9-47fd-8cc9-81081e18f7af");
 
             Random r = new Random();
-            int rInt = r.Next(0, principalParts.Count - 1); //for ints
+            int rInt = r.Next(0, principalParts.Count); //for ints
 
             PrincipalPartId = principalParts[rInt].Id;
 
