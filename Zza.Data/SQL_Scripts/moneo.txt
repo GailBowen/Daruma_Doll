@@ -1,0 +1,114 @@
+﻿
+SET IDENTITY_INSERT [dbo].[NonFiniteSuffix] ON 
+GO
+
+INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future], [special]) 
+	VALUES (5, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Infinitive', 0, N'ēre', N'uisse', N'itūrum esse', NULL)
+GO
+
+INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future], [special]) 
+  VALUES (6, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Infinitive', 1, N'ērī', N'itum esse', N'itum īrī', N'ērī,ērier')
+GO
+INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future], [special]) 
+ VALUES (7, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Participle', 0, N'ēns', N'', N'itūrus', NULL)
+GO
+INSERT [dbo].[NonFiniteSuffix] ([Id], [Conjugation], [Mood], [Type], [Passive], [present], [perfect], [future], [special]) 
+VALUES (8, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Participle', 1, N'', N'itus', N'endus', NULL)
+GO
+SET IDENTITY_INSERT [dbo].[NonFiniteSuffix] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Suffix] ON 
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (1, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Present', 0, N'eō', N'ēs', N'et', N'ēmus', N'ētis', N'ent')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (2, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Imperfect', 0, N'ēbam', N'ēbās', N'ēbat', N'ēbāmus', N'ēbātis', N'ēbant')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (3, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Future', 0, N'ēbō', N'ēbis', N'ēbit', N'ēbimus', N'ēbitis', N'ēbunt')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (4, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Perfect', 0, N'uī', N'uistī', N'uit', N'uimus', N'uistis', N'ērunt,uēre')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (5, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Pluperfect', 0, N'ueram', N'uerās', N'uerat', N'uerāmus', N'uerātis', N'uerant')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (6, CAST(1.0 AS Decimal(2, 1)), N'Subjunctive', N'Present', 0, N'eam', N'eās', N'et', N'ēmus', N'ētis', N'ent')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (7, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Present', 1, N'or', N'āris,āre', N'ātur', N'āmur', N'āminī', N'antur')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (8, CAST(1.0 AS Decimal(2, 1)), N'Subjunctive', N'Present', 1, N'ear', N'eāris,eāre', N'eātur', N'eāmur', N'āminī', N'eantur')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (9, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Future', 0, N'ēbō', N'ēbis', N'ēbit', N'ēbimus', N'ēbitis', N'ēbunt')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (10, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Future', 1, N'ēbor', N'ēberis,ēbere', N'ēbitur', N'ēbimur', N'ēbiminī', N'ēbuntur')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (11, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Imperfect', 1, N'ēbar', N'ēbāris,ēbāre', N'ēbātur', N'ēbāmur', N'ēbāminī', N'ēbantur')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (12, CAST(1.0 AS Decimal(2, 1)), N'Subjunctive', N'Imperfect', 0, N'ērem', N'ērēs', N'ēret', N'ērēmus', N'ērētis', N'ērent')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (13, CAST(1.0 AS Decimal(2, 1)), N'Subjunctive', N'Imperfect', 1, N'ērer', N'ērēris,ērēre', N'ērētur', N'ērēmur', N'ērēminī', N'ērentur')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (14, CAST(1.0 AS Decimal(2, 1)), N'Subjunctive', N'Perfect', 0, N'uerim', N'uerīs', N'uerit', N'uerīmus', N'uerītis', N'uerint')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (1014, CAST(1.0 AS Decimal(2, 1)), N'Subjunctive', N'Pluperfect', 0, N'monuissem', N'monuissēs', N'monuisset', N'monuissēmus', N'monuissētis', N'mounissent')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (1015, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Future Perfect', 0, N'monuerō', N'monueris', N'monuerit', N'monuerimuss', N'monueritis', N'monuverint')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (1016, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Present Imperative', 0, N'', N'ē', N'', N'', N'ēte', N'')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (1017, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Present Imperative', 1, N'', N'ēre', N'', N'', N'ēminī', N'')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (1018, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Future Imperative', 0, N'', N'ētō', N'ētō', N'', N'ētōte', N'entō')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (1019, CAST(1.0 AS Decimal(2, 1)), N'Indicative', N'Future Imperative', 1, N'', N'ētor', N'ētor', N'', N'', N'entor')
+GO
+INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
+VALUES (1020, CAST(2.0 AS Decimal(2, 1)), N'Indicative', N'Present', 0, N'eō', N'ēs', N'et', N'ēmus', N'ētis', N'ent')
+GO
+SET IDENTITY_INSERT [dbo].[Suffix] OFF
+GO
+SET IDENTITY_INSERT [dbo].[VerbalNounSuffix] ON 
+GO
+INSERT [dbo].[VerbalNounSuffix] ([Id], [Conjugation], [Type], [Accusative], [Genitive], [Dative], [Ablative]) VALUES (1, CAST(1.0 AS Decimal(2, 1)), N'Gerund', N'andum', N'andī', N'andō', N'andō')
+GO
+INSERT [dbo].[VerbalNounSuffix] ([Id], [Conjugation], [Type], [Accusative], [Genitive], [Dative], [Ablative]) VALUES (2, CAST(1.0 AS Decimal(2, 1)), N'Supine', N'ātum', NULL, NULL, N'ātū')
+GO
+SET IDENTITY_INSERT [dbo].[VerbalNounSuffix] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Passive] ON 
+GO
+INSERT [dbo].[Passive] ([Id], [Tense], [Mood], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) VALUES (1, N'Perfect', N'Indicative', N'sum', N'es', N'est', N'sumus', N'estis', N'sunt')
+GO
+INSERT [dbo].[Passive] ([Id], [Tense], [Mood], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) VALUES (2, N'Perfect', N'Subjunctive', N'sim', N'sis', N'sit', N'simus', N'sitis', N'sint')
+GO
+INSERT [dbo].[Passive] ([Id], [Tense], [Mood], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) VALUES (3, N'Pluperfect', N'Indicative', N'eram', N'erās', N'erat', N'erāmus', N'erātis', N'erant')
+GO
+INSERT [dbo].[Passive] ([Id], [Tense], [Mood], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) VALUES (4, N'Pluperfect', N'Subjunctive', N'essem/forem', N'essēs/forēs', N'esset/foret', N'essēmus/forēmus', N'essētis/forētis', N'essent/forent')
+GO
+INSERT [dbo].[Passive] ([Id], [Tense], [Mood], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) VALUES (5, N'Future Perfect', N'Indicative', N'erō', N'eris/ere', N'erit', N'erimus', N'eritis', N'erunt')
+GO
+SET IDENTITY_INSERT [dbo].[Passive] OFF
+GO
+INSERT [dbo].[PrincipalPart] ([Id], [Present], [PresentInfinitive], [PerfectActive], [Supine], [Deponent], [Defective], [Conjugation], [SpecialPassiveInfinitive]) VALUES (N'7b115ca5-2b7c-45eb-9883-3a205151c13a', N'moneō', N'monēre', N'monuī', N'monitu', 0, 0, CAST(2.0 AS Decimal(2, 1)), 1)
+GO
+INSERT [dbo].[PrincipalPart] ([Id], [Present], [PresentInfinitive], [PerfectActive], [Supine], [Deponent], [Defective], [Conjugation], [SpecialPassiveInfinitive]) VALUES (N'7b115ca5-2b7c-45eb-9883-3a205151c13e', N'ignōrō', N'ignōrāre', N'ignōrāvī', N'ignōrātum', 0, 0, CAST(1.0 AS Decimal(2, 1)), 1)
+GO
+INSERT [dbo].[PrincipalPart] ([Id], [Present], [PresentInfinitive], [PerfectActive], [Supine], [Deponent], [Defective], [Conjugation], [SpecialPassiveInfinitive]) VALUES (N'1411daa4-33c9-47fd-8cc9-81081e18f7af', N'amō', N'amāre', N'amāvī', N'amātum', 0, 0, CAST(1.0 AS Decimal(2, 1)), 0)
+GO

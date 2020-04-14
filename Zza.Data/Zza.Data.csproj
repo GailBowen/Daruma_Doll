@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Notes\notes.txt" />
+    <Content Include="SQL_Scripts\moneo.txt" />
     <Content Include="SQL_Scripts\Tables.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
