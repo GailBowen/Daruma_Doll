@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Notes\notes.txt" />
+    <Content Include="Notes\useful.txt" />
     <Content Include="SQL_Scripts\moneo.txt" />
     <Content Include="SQL_Scripts\Tables.txt" />
   </ItemGroup>

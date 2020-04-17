@@ -1,0 +1,7 @@
+﻿Find: VALUES (1
+Replace: VALUES (10
+
+Find: VALUES \(\d+
+Replace: $0¬
+
+Then f&r ¬
