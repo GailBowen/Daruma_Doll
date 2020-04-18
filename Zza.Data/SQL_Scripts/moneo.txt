@@ -20,7 +20,7 @@ GO
 SET IDENTITY_INSERT [dbo].[Suffix] ON 
 GO
 INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
-VALUES (10, CAST(2.0 AS Decimal(2, 1)), N'Indicative', N'Present', 0, N'eō', N'ēs', N'et', N'ēmus', N'ētis', N'ent')
+VALUES (19, CAST(2.0 AS Decimal(2, 1)), N'Indicative', N'Present', 0, N'eō', N'ēs', N'et', N'ēmus', N'ētis', N'ent')
 GO
 INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
 VALUES (20, CAST(2.0 AS Decimal(2, 1)), N'Indicative', N'Imperfect', 0, N'ēbam', N'ēbās', N'ēbat', N'ēbāmus', N'ēbātis', N'ēbant')
@@ -62,10 +62,10 @@ INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singula
 VALUES (140, CAST(2.0 AS Decimal(2, 1)), N'Subjunctive', N'Perfect', 0, N'uerim', N'uerīs', N'uerit', N'uerīmus', N'uerītis', N'uerint')
 GO
 INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
-VALUES (10140, CAST(2.0 AS Decimal(2, 1)), N'Subjunctive', N'Pluperfect', 0, N'monuissem', N'monuissēs', N'monuisset', N'monuissēmus', N'monuissētis', N'mounissent')
+VALUES (10140, CAST(2.0 AS Decimal(2, 1)), N'Subjunctive', N'Pluperfect', 0, N'uissem', N'uissēs', N'uisset', N'uissēmus', N'uissētis', N'uissent')
 GO
 INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
-VALUES (10150, CAST(2.0 AS Decimal(2, 1)), N'Indicative', N'Future Perfect', 0, N'monuerō', N'monueris', N'monuerit', N'monuerimuss', N'monueritis', N'monuverint')
+VALUES (10150, CAST(2.0 AS Decimal(2, 1)), N'Indicative', N'Future Perfect', 0, N'uerō', N'ueris', N'uerit', N'uerimuss', N'ueritis', N'uverint')
 GO
 INSERT [dbo].[Suffix] ([Id], [Conjugation], [Mood], [Tense], [Passive], [singular_first], [singular_second], [singular_third], [plural_first], [plural_second], [plural_third]) 
 VALUES (10160, CAST(2.0 AS Decimal(2, 1)), N'Indicative', N'Present Imperative', 0, N'', N'ē', N'', N'', N'ēte', N'')

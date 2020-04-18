@@ -17,8 +17,23 @@ namespace ZzaDashboard.Logic
         public FormManager(PrincipalPart principalPart, List<NonFiniteSuffix> nonFiniteSuffixes)
         {
             _principalPart = principalPart;
-            
-            _presentStem = _principalPart.Present.Remove(_principalPart.Present.Length - 1);
+
+            switch (_principalPart.Conjugation)
+            {
+                case 1:
+                    _presentStem = _principalPart.Present.Remove(_principalPart.Present.Length - 1);
+                    break;
+
+                case 2:
+                    _presentStem = _principalPart.Present.Remove(_principalPart.Present.Length - 2);
+                    break;
+
+                default:
+                    _presentStem = _principalPart.Present.Remove(_principalPart.Present.Length - 1);
+                    break;
+            }
+
+           
 
             if (string.IsNullOrEmpty(_principalPart.Supine) == false)
             {
