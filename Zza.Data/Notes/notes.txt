@@ -32,3 +32,5 @@ Try doing ago as egisse in perfect infinitive
 Save scripts of sql special passive infinitive changes.
 
 Conjugation 1, 2 etc should be ENUM!
+
+Checked moneo as far as imperatives.
