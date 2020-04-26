@@ -1,0 +1,3 @@
+﻿https://en.wiktionary.org/wiki/Template:la-conj
+
+https://en.wiktionary.org/w/api.php?format=xml&action=query&titles=spargo&rvprop=content&prop=revisions&rvslots=*
